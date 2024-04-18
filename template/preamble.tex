@@ -1,0 +1,194 @@
+% ! TEX root = ../mechanics.tex 
+
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{unicode-math}
+%\usepackage{mathspec}
+\usepackage[heading=true,scheme=chinese,linespread=1.5,zihao=-4,fontset=none]{ctex}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tocloft}%目录
+\usepackage[left=2.5cm,right=2cm,bottom=2cm,top=2cm]{geometry}%设置页面
+\usepackage{fancyhdr}%设置版面
+\usepackage{xcolor}
+\usepackage{framed}
+\usepackage{pdfsync}
+\usepackage[overload]{empheq}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable, skins, theorems}
+\usepackage{witharrows}
+\usepackage{manfnt}
+\usepackage{enumitem}
+\usepackage{makeidx}
+\usepackage{appendix}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{xeCJK}
+\usepackage{extarrows}
+%\usepackage{autobreak}
+\usepackage{fontawesome}
+\usepackage{booktabs}%三线表
+%\usepackage{svg}
+
+%行内数学公式展示模式
+\everymath{\displaystyle}
+%行间公式允许跨页
+\allowdisplaybreaks[4]
+%数学算子定义
+\DeclareMathOperator*{\dive}{div}
+\DeclareMathOperator*{\curl}{curl}
+\DeclareMathOperator*{\rot}{rot}
+\DeclareMathOperator*{\grad}{grad}
+\renewcommand{\grad}{\mathbf{grad}\,}
+\renewcommand{\rot}{\mathbf{rot}\,}
+\renewcommand{\curl}{\mathbf{curl}\,}
+%颜色定义
+\definecolor{titleblue}{RGB}{71, 143, 204}
+\definecolor{notered}{RGB}{255, 25, 25}
+\definecolor{noteorange}{RGB}{255, 134, 24}
+\definecolor{main}{RGB}{0, 166, 82}
+\definecolor{blue}{RGB}{0, 174, 247}
+
+%页面版式设置
+\fancyhf{}
+\fancyfoot[c]{\color{titleblue}\small\thepage}
+%\fancyfoot[C]{\textcolor{titleblue}{\thepage}}
+\fancyhead[r]{\color{titleblue}\rightmark}
+%\fancyfoot[RO,LE]{$\heartsuit$}
+\renewcommand{\headrule}{\color{titleblue}
+	\hrule width\headwidth height\headrulewidth
+	\vskip-\headrulewidth}
+
+%列表环境设置
+\setlist[enumerate]{label=\color{titleblue}{\arabic* .}}
+\setlist[enumerate,2]{label=\color{titleblue}{\alph*)}}
+
+%制作索引
+\makeindex
+
+%字体设置
+\setCJKmainfont[Mapping = fullwidth-stop,BoldFont=SourceHanserifSC-Bold.otf]{SourceHanserifSC-Regular.otf}
+\setmathfont{XITS Math}
+\setmathrm{XITS Math}
+\setmainfont{Times New Roman}
+
+
+
+%ctex宏包设置
+\ctexset{
+	%fontset=winfonts,
+  punct=quanjiao,
+	tocdepth=1,%目录深度设为3级
+	part/format+=\color{titleblue},
+	chapter/format=\color{titleblue}\LARGE\centering\bfseries,
+	section/format=\color{titleblue}\large\bfseries,
+	subsection/format=\color{titleblue}\bfseries,
+}
+
+%
+\xeCJKsetup{
+  CJKmath=true,
+  CJKspace=false,
+}
+\tcbset{
+	common/.style={
+			%fontupper=\citshape,
+			lower separated=false,
+			coltitle=white,
+			colback=gray!5,
+			boxrule=0.5pt,
+			fonttitle=\bfseries,
+			enhanced,
+			breakable,
+			top=8pt,
+			before skip=8pt,
+			attach boxed title to top left={
+					yshift=-0.11in,
+					xshift=0.15in},
+			boxed title style={
+					boxrule=0pt,
+					colframe=white,
+					arc=0pt,
+					outer arc=0pt},
+			separator sign={.},
+			description delimiters = {(}{)},
+		},
+	exastyle/.style={
+			common,
+			colframe=main,
+			colback=main!5,
+			colbacktitle=main,
+			overlay unbroken and last={
+					\node[anchor=south east, outer sep=0pt] at (\linewidth-width,0) {
+						\textcolor{main}{$\clubsuit$}
+					};
+				}
+		},
+	notstyle/.style={
+			common,
+			colframe=noteorange,
+			colback=noteorange!5,
+			colbacktitle=noteorange,
+			overlay unbroken and last={
+					\node[anchor=south east, outer sep=0pt] at (\linewidth-width,0) {
+						\textcolor{noteorange}{$\spadesuit$}
+					};
+				}
+		},
+}
+
+%自定义命令
+\renewcommand\boxed[1]{\begin{framed}#1\end{framed}}
+%多行公式对齐方框
+\newcommand*\widefbox[1]{\fbox{\hspace{1em}#1\hspace{1em}}}
+\definecolor{myblue}{rgb}{.8, .8, 1}
+\newcommand*\bluebox[1]{%
+	\colorbox{myblue}{\hspace{1em}#1\hspace{1em}}
+}
+
+%行内注意
+\newenvironment{note}{
+	\par\noindent\makebox[-3pt][r]{
+		\scriptsize\color{notered}\textdbend\quad}
+	\textbf{\color{noteorange}注意} \bfseries
+}
+{\par}
+
+%例题环境
+\newcounter{exam}[chapter]
+\setcounter{exam}{0}
+\renewcommand{\theexam}{\thechapter.\arabic{exam}}
+\newenvironment{example}
+{
+	\refstepcounter{exam}
+	\begin{tcolorbox}[exastyle,title=例题\,\theexam]
+		{\bfseries 题目\,\,}\bfseries
+		}
+		{
+	\end{tcolorbox}
+}
+
+%注意环境
+%{
+%	\begin{tcolorbox}[notstyle,title=笔记]
+%		}
+%		{
+%	\end{tcolorbox}
+%}
+\newenvironment{notice}{\begin{tcolorbox}[breakable,enhanced,leftrule=3pt,
+    rightrule=0pt,toprule=0pt,bottomrule=0pt,colback=noteorange!5,
+    colframe=noteorange,sharp corners]
+{\color{noteorange}\zihao{2}\faPencilSquareO \bfseries 笔记}\par
+}{\end{tcolorbox}}
+
+\newenvironment{summary}{
+  \begin{tcolorbox}[
+    breakable,enhanced,leftrule=5pt,rightrule=0pt,
+    toprule=0pt,bottomrule=0pt,colback=blue!5,
+    colframe=blue,sharp corners
+    ]
+    {\color{blue}\zihao{2}\faFolderO \bfseries 总结}\par
+}
+{
+\end{tcolorbox}
+}

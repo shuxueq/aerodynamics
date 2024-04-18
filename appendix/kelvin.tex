@@ -1,0 +1,70 @@
+% ! TEX root = ../mechanics.tex
+
+\chapter{开尔文环量定理证明}
+\label{kelvin theroem}
+考虑无粘不可压流动，由环量定义有
+\[
+	\Gamma=\oint _c \mathbf{V}\cdot \mathrm{d} \mathbf{s}
+\]
+由于力学中，函数的性质都很好，所以微分运算和积分运算可以
+直接交换次序。即
+\[
+	\begin{split}
+		\frac{\mathrm{D} \Gamma}{\mathrm{D}t } & =\frac{\mathrm{D} }{\mathrm{D} t }\oint _c \mathbf{V} \cdot \mathrm{d}\mathbf{s}  \\
+		                                       & =\oint _c \frac{\mathrm{D}}{\mathrm{D} t}(\mathbf{V}\cdot \mathrm{d} \mathbf{s})  \\
+		                                       & =\oint _c \frac{\mathrm{D} \mathbf{V} }{\mathrm{D} t}\cdot \mathrm{d}\mathbf{s} +
+		\mathbf{V}\cdot \frac{\mathrm{D}(\mathrm{d}\mathbf{s})}{\mathrm{D} t}
+	\end{split}
+\]
+因为
+\[
+	\frac{\mathrm{D}(\mathrm{d}\mathbf{s})}{\mathrm{D}t}=\mathrm{d}\mathbf{V}
+\]
+V是一个单值函数，所以
+\[
+	\begin{split}
+		\oint _c \mathbf{V} \cdot \frac{\mathrm{D}(\mathrm{d}\mathbf{s})}{\mathrm{D}t} & =
+		\oint _c \mathbf{V}\cdot \mathrm{d}\mathbf{V}                                       \\
+		                                                                               & =
+		\oint _c (\mathrm{d} \frac{V^2}{2})                                                 \\
+		                                                                               & =0
+	\end{split}
+\]
+所以
+\[
+	\frac{\mathrm{D} \Gamma}{\mathrm{D}t}=\oint _c \frac{\mathrm{D} \mathbf{V}}{\mathrm{D}t}\cdot \mathrm{d}\mathbf{s}
+\]
+由动量方程，$\frac{\mathrm{D}\mathbf{V}}{\mathrm{D}t}$是加速度，也即单位质量流体受到的合外力。
+所以
+\[
+  \frac{\mathrm{D}\mathbf{V}}{\mathrm{D}t}=-\frac{1}{\rho}\nabla P
+\]
+而
+\[
+  \begin{split}
+  \nabla P \cdot \mathrm{d}\mathbf{s}&=(\frac{\partial P }{\partial x},\frac{\partial P}{\partial y},
+  \frac{\partial P}{\partial z})\cdot (\mathrm{d}x,\mathrm{d}y,\mathrm{d}z)\\ 
+                                     &=\frac{\partial P }{\partial x}\mathrm{d}x+
+                                     \frac{\partial P}{\partial y}\mathrm{d}y+
+  \frac{\partial P}{\partial z}\mathrm{d}z\\
+                                     &=\mathrm{d}P(全微分定义)
+  \end{split}
+\]
+于是
+\[
+  \begin{split}
+    \frac{\mathrm{D} \mathbf{V}}{\mathrm{D} t}\cdot \mathrm{d}\mathbf{s}&=
+    -\frac{1}{\rho}\nabla P \cdot \mathrm{d}\mathbf{s}\\                                                                      &=
+     -\frac{1}{\rho}\mathrm{d}P
+\end{split}
+\]
+于是
+\[
+  \oint _c 
+    \frac{\mathrm{D} \mathbf{V}}{\mathrm{D} t}\cdot \mathrm{d}\mathbf{s}=
+    \oint _c 
+     -\frac{1}{\rho}\mathrm{d}P
+     =0
+\]
+其中$\rho=常数$或者$\rho=\rho(P)$，即为不可压流动，或者是密度只是压强的函数的流动。
+

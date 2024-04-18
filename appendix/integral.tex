@@ -1,0 +1,241 @@
+% ! TEX root=../mechanics.tex
+
+\chapter{积分}
+\section{第一个积分}
+\label{马赫波积分}
+求积分
+\[
+	\int \frac{\sqrt{M^2-1}}{\left(1+\frac{\gamma-1}{2}M^2\right)M}\mathrm{d}M
+\]
+首先,换元,令$M=\sec \alpha$,得到$\mathrm{d}M=\tan \alpha \sec \alpha \mathrm{d}\alpha$,
+则有$\tan \alpha=\sqrt{M^2-1}$,$\alpha=\arctan \sqrt{M^2-1}$
+\begin{equation*}
+	\begin{split}
+		\begin{WithArrows}[code-before=\color{titleblue}]
+			\int \frac{\sqrt{M^2-1}}{\left(1+\frac{\gamma-1}{2}M^2\right)M}\mathrm{d}M
+			%\Arrow{$M=\sec \alpha$\\
+			%   $\mathrm{d}M= \tan \alpha \sec \alpha \mathrm{d}\alpha$ }\\
+			&=\int \frac{\tan^2 \alpha \cdot \sec \alpha }{\sec \alpha \left(1+\frac{\gamma-1}{2}\sec^2 \alpha\right)}\mathrm{d}\alpha\\
+			&= \int \frac{\tan^2 \alpha }{1+\frac{\gamma-1}{2}\sec^2\alpha} \mathrm{d}\alpha
+			\Arrow{分子分母同乘\\ $\cos^2\alpha$,并约化}\\
+			&=\int \left(-1+\frac{\gamma+1 }{2\cos^2\alpha+\gamma-1}\right)\mathrm{d}\alpha
+			\Arrow{
+				$u=\tan \alpha$\\
+				$\mathrm{d}\alpha=\frac{\mathrm{d}u}{1+u^2}$
+			}\\
+			&=-\alpha+\int \frac{\gamma+1 }{\frac{2}{1+u^2}+\gamma-1}\cdot \frac{\mathrm{d}u}{1+u^2}\\
+			&=-\alpha +\int \frac{1}{\frac{\gamma-1}{\gamma+1 }u^2+1 }\mathrm{d}u\\
+			&=-\alpha+\sqrt{\frac{\gamma+1 }{\gamma-1}} \int
+			\frac{1}{\left(\sqrt{\frac{\gamma-1}{\gamma+1 }} u\right)^2+1}
+			\mathrm{d}\left(\sqrt{\frac{\gamma-1 }{\gamma+1}}u\right)\\
+			&=-\alpha+\sqrt{\frac{\gamma+1 }{\gamma-1 }} \arctan \sqrt{\frac{\gamma-1}{\gamma+1}}u\\
+			&=\sqrt{\frac{\gamma+1 }{\gamma-1}} \arctan \sqrt{\frac{\gamma-1 }{\gamma+1 }\left(M^2-1\right)}-\arctan \sqrt{M^2-1}
+		\end{WithArrows}
+	\end{split}
+\end{equation*}
+
+\section{第二个积分}
+\label{三角函数定积分}
+{\color{titleblue}
+证明定积分
+\[
+	\int _0^\pi \frac{\cos n \theta}{\cos \theta -\cos \theta_0}\,\mathrm{d}\theta=\frac{\pi \sin n\theta_0}{\sin \theta_0},\qquad n=0,1,2,\ldots
+\]
+}
+
+积化和差公式
+\[
+	\begin{split}
+		\cos \theta -\cos \theta_0 & =\cos\left(\frac{\theta+\theta_0}{2}+\frac{\theta-\theta_0}{2}\right)
+		-\cos\left(\frac{\theta+\theta_0}{2}-\frac{\theta-\theta_0}{2}\right)                                   \\
+		                           & =-2\sin \frac{\theta+\theta_0}{2}\sin \frac{\theta-\theta_0}{2}
+	\end{split}
+\]
+\[
+	\begin{split}
+		\sin \theta & =\sin\left(\frac{\theta+\theta_0}{2}+\frac{\theta-\theta_0}{2}\right)     \\
+		            & =\cos \frac{\theta+\theta_0}{2}\sin \frac{\theta-\theta_0}{2}+
+		\cos \frac{\theta-\theta_0}{2}\sin \frac{\theta+\theta_0}{2}
+	\end{split}
+\]
+那么
+\[
+	\frac{2\sin \theta_0}{\cos \theta-\cos \theta_0}=\cot \frac{\theta_0-\theta}{2}+\cot \frac{\theta_0+\theta}{2}
+\]
+考虑积分
+\[
+	I=\int _0^\pi \frac{\cos n \theta}{\cos \theta -\cos \theta_0}\sin \theta_0 \,\mathrm{d}\theta
+	=\int _0^\pi \left(\cot \frac{\theta_0-\theta}{2}+\cot \frac{\theta_0+\theta}{2}\right)\cos n \theta \,\mathrm{d} \theta
+\]
+而
+\[
+	\int _0^\pi \cot \frac{\theta_0-\theta}{2} \cos n \theta \,\mathrm{d}\theta
+	\xlongequal{用-\theta 换\theta}
+	\int _{-\pi}^0 \cot \frac{\theta_0+\theta}{2} \cos n \theta\,\mathrm{d}\theta
+\]
+\[
+	\int _0^\pi \cot \frac{\theta_0+\theta}{2} \cos n \theta \,\mathrm{d}\theta
+	\xlongequal{用-\theta 换\theta}
+	\int _{-\pi}^0 \cot \frac{\theta_0-\theta}{2} \cos n \theta \,\mathrm{d}\theta
+\]
+\[
+	\int _0^\pi \left(\cot \frac{\theta_0-\theta}{2}+\cot \frac{\theta_0+\theta}{2}\right)\cos n \theta \,\mathrm{d} \theta=
+	\int _{-\pi}^0 \left(\cot \frac{\theta_0+\theta}{2}+\cot \frac{\theta_0-\theta}{2}\right)\cos n \theta \,\mathrm{d} \theta
+\]
+那么
+\[
+	\begin{split}
+		\int _0^\pi\left(\cot \frac{\theta_0-\theta}{2}+\cot \frac{\theta_0+\theta}{2}\right)\cos n \theta \,\mathrm{d}\theta
+		 & =
+		\int _0^\pi \cot \frac{\theta_0-\theta}{2}\cos n \theta \,\mathrm{d} \theta+
+		\int _0^\pi \cot \frac{\theta_0+\theta}{2}\cos n \theta \,\mathrm{d} \theta \\
+		 & =
+		\int _{-\pi}^0 \cot \frac{\theta_0+\theta}{2}\cos n \theta \,\mathrm{d} \theta+
+		\int _0^\pi \cot \frac{\theta_0+\theta}{2}\cos n \theta\,\mathrm{d} \theta \\
+		 & =
+		\int _{-\pi}^\pi \cot \frac{\theta_0+\theta}{2}\cos n \theta \,\mathrm{d} \theta
+	\end{split}
+\]
+所以
+\begin{equation*}
+	\begin{split}
+		\begin{WithArrows}
+			I&=\frac{1}{2}\int _0^\pi \left(\cot \frac{\theta_0+\theta}{2}+\cot \frac{\theta_0-\theta}{2}\right)\cos n \theta \,\mathrm{d}\theta \\
+			&=\frac{1}{2}\int _{-\pi}^\pi \cot \frac{\theta_0+\theta}{2} \cos n \theta \,\mathrm{d} \theta 
+      \Arrow{$t=\theta+\theta_0$}\\ 
+      &=\frac{1}{2}\int _{\theta_0-\pi}^{\theta+\pi} \cos n \left(t-\theta_0\right) \cot \frac{t}{2}\,\mathrm{d} t  
+      \Arrow{
+      	展开$\cos n (t-\theta_0)$}\\ 
+      &=\frac{1}{2}\int _{\theta-\pi}^{\theta_0+\pi} \left(\cos nt \cos n \theta_0 +\sin nt \sin n \theta_0 \right)\cot \frac{t}{2}\,\mathrm{d} t  \\ 
+      &=\frac{\cos n \theta_0}{2} \int _{\theta_0-\pi}^{\theta_0+\pi} \cos nt \cot \frac{t}{2}\,\mathrm{d}t+
+      \frac{\sin n \theta_0}{2} \int _{\theta_0-\pi}^{\theta_0+\pi} \sin nt \cot \frac{t}{2} \,\mathrm{d} t  
+			\end{WithArrows}
+	\end{split}
+\end{equation*}
+其中$\sin n \theta_0$和$\cos n \theta_0$都是和积分变量无关的
+常数。
+
+下证积分
+\[
+  \int _{\theta_0-\pi}^{\theta_0+\pi} \cos nt \cot \frac{t}{2} \,\mathrm{d}t=0,\qquad n=1,2, \ldots 
+\]
+显然
+\[
+  \int _{\theta_0-\pi}^{\theta_0+\pi} \sin nt\,\mathrm{d}t=0,\qquad n=1,2, \ldots 
+\]
+而积分
+\[
+  \begin{split}
+  \int _{\theta_0-\pi}^{\theta_0+\pi} \sin (n-1)t \cos t \,\mathrm{d}t 
+  &=\int _{\theta_0-\pi}^{\theta_0+\pi} \sin (n-1)t \,\mathrm{d} \sin t\\  
+  &=\sin (n-1)t \sin t\bigg| _{\theta_0-\pi}^{\theta_0+\pi}-
+    \int _{\theta_0-\pi}^{\theta_0+\pi} \sin t (n-1) \cos (n-1)t \,\mathrm{d}t \\ 
+  &=(n-1)\int _{\theta_0-\pi}^{\theta_0+\pi} \cos (n-1)t \,\mathrm{d} \cos t \\
+  &=(n-1) \cos t \cos (n-1)t \bigg| _{\theta_0-\pi}^{\theta_0+\pi}+
+    \int _{\theta_0-\pi}^{\theta_0+\pi} (n-1)^2 \sin (n-1)t \cos t \,\mathrm{d} t \\
+  &=(n-1)^2\int _{\theta_0-\pi}^{\theta_0+\pi} \sin (n-1)t \cos t \,\mathrm{d}t
+  \end{split}
+\]
+所以积分
+\[
+  \int _{\theta_0-\pi}^{\theta_0+\pi} \sin (n-1)t \cos t \,\mathrm{d}t =0
+\]
+同理可证下面积分
+\[
+  \int _{\theta_0-\pi}^{\theta_0+\pi} \sin (n-1)t \sin t \,\mathrm{d}t=0
+\]
+\[
+  \int _{\theta_0-\pi}^{\theta_0+\pi} \cos (n-1)t \cos t \,\mathrm{d}t=0
+\]
+\[
+  \int _{\theta_0-\pi}^{\theta_0+\pi} \cos (n-1)t \sin t \,\mathrm{d}t=0
+\]
+于是
+\[
+  \begin{split}
+    \cos nt \cdot \cot \frac{t}{2}
+    &=\cos nt \frac{\cos \frac{t}{2}}{\sin \frac{t}{2}}\\ 
+    &=\cos nt \frac{\cos ^2 \frac{t}{2}}{\sin \frac{t}{2}\cos \frac{t}{2}}\\ 
+    &=\cos nt \frac{1+\cos t }{\sin t}\\
+    &=\cos [(n-1)t+t] \frac{1+\cos t }{\sin t }\\
+    &=\left[\cos (n-1)t \cos t -\sin (n-1)t \sin t\right]\frac{1+\cos t }{\sin t}\\ 
+    &=\frac{\cos (n-1)t \cos t (1+\cos t)}{\sin t}-\sin (n-1)t -\sin(n-1)t \cos  t
+  \end{split}
+\]
+记$I_n=\int_{\theta_0-\pi}^{\theta_0+\pi} \cos nt \cot \frac{t}{2}\, \mathrm{d}t$,那么
+\[
+  \begin{split}  
+    I_1&=\int _{\theta_0-\pi}^{\theta_0+\pi} \cos t \cot \frac{t}{2}\,\mathrm{d}t \\
+       &=\int _{\theta_0-\pi}^{\theta0+\pi} \cos t \frac{1+\cos t}{\sin t}\,\mathrm{d}t \\ 
+       &=\int _{\theta_0-\pi}^{\theta_0+\pi} \frac{\cos t +\cos ^2 t }{\sin t}\,\mathrm{d} t \\ 
+       &=\int _{\theta_0-\pi}^{\theta_0+\pi} \frac{\cos t +1- \sin t ^2 t}{\sin t}\, \mathrm{d}t\\ 
+       &=\int _{\theta_0-\pi}^{\theta_0+\pi} \left(\cot \frac{t}{2} +\sin t \right)\,\mathrm{d}t \\
+       &=0
+  \end{split}
+\]
+所以
+\begin{align*}
+    I_n=
+    \int _{\theta_0-\pi}^{\theta_0+\pi} \cos nt \cot \frac{t}{2} \,\mathrm{d} t 
+    &=\int _{\theta_0-\pi}^{\theta_0+\pi} \frac{\cos (n-1)t \cos t (1+\cos t)}{\sin t}\,\mathrm{d}t
+    -
+    \int _{\theta_0-\pi}^{\theta_0+\pi} \sin (n-1)t \,\mathrm{d}t \\ 
+    & \quad
+    -
+    \int _{\theta_0-\pi}^{\theta_0+\pi} \sin (n-1)t \cos t \,\mathrm{d}t\\ 
+    &=\int _{\theta_0-\pi}^{\theta_0+\pi} \frac{\cos (n-1)t \cos t (1+\cos t)}{\sin t} \,\mathrm{d} t\\ 
+    &=\int _{\theta_0-\pi}^{\theta_0+\pi} \frac{\cos (n-1)t (\cos t +\cos ^2 t)}{\sin t} \,\mathrm{d}t\\ 
+    &=\int _{\theta_0-\pi}^{\theta_0+\pi} \frac{\cos (n-1)t (\cos t +1- \sin ^2 t )}{\sin t}\,\mathrm{d}t \\ 
+    &=\int _{\theta0-\pi}^{\theta_0+\pi} \frac{(1+\cos t)\cos (n-1)t }{\sin t}\,\mathrm{d}t
+    -\int _{\theta_0-\pi}^{\theta_0+\pi} \cos (n-1)t \sin t \,\mathrm{d}t \\ 
+    &=\int _{\theta_0-\pi}^{\theta_0+\pi} \frac{(1+\cos t)\cos (n-1)t }{\sin t}\,\mathrm{d}t \\ 
+    &=I_{n-1}
+\end{align*}
+所以$I_n=I_{n-1}=\cdots =I_1=0$.
+同上可证
+\[
+  \int _{\theta_0-\pi}^{\theta_0+\pi} \sin nt \cot \frac{t}{2} \,\mathrm{d}t =
+  \int _{\theta_0-\pi}^{\theta_0+\pi} \sin (n-1)t \, \cot \frac{t}{2}\,\mathrm{d}t
+\]
+而
+\[
+  \int _{\theta_0-\pi}^{\theta_0+\pi} \sin t \, \cot \frac{t}{2} \,\mathrm{d} t =2\pi
+\]
+所以
+\[
+  \int _{\theta_0-\pi}^{\theta_0+\pi} \sin nt \, \cot \frac{t}{2}\,\mathrm{d} t =2\pi
+\]
+所以
+\[
+  I=\frac{\sin n \theta_0}{2} \int _{\theta_0-\pi}^{\theta_0+\pi} \sin nt \cot \frac{t}{2}\, \mathrm{d} t 
+  =\pi \sin n \theta_0
+\]
+原积分
+\[
+  \int _0^{\pi} \frac{\cos n \theta}{\cos \theta -\cos \theta_0}\,\mathrm{d}t =
+  \frac{\pi \sin n \theta_0}{\sin \theta_0}
+\]
+
+\section{第三个积分}
+{
+  \color{titleblue}
+  证明
+  \[
+    \int _0^\pi \frac{\sin n \theta\,\sin \theta}{\cos \theta - \cos \theta_0}\,
+    \mathrm{d} \theta=-\pi \cos n \theta_0,\qquad n=1,2, \ldots 
+  \]
+}
+由积化和差公式
+\[
+  \sin n \theta \sin \theta =\frac{1}{2}\left[\cos (n-1)\theta -\cos (n+1)\theta\right]
+\]
+所以原积分
+\[
+  \begin{split}
+    I=\int _0^\pi \frac{\sin n \theta \sin \theta}{\cos \theta -\cos \theta_0}\,\mathrm{d}\theta
+    &=\frac{1}{2} \int _0^\pi \frac{\cos (n-1) \theta}{\cos \theta-\cos \theta_0}\,\mathrm{d}\theta
+    -\frac{1}{2}\int _0^\pi \frac{\cos (n+1) \theta}{\cos \theta -\cos \theta_0}\, \mathrm{d} \theta\\ 
+    &=\frac{1}{2} \left(\frac{\pi \sin (n-1)\theta_0}{\sin \theta_0}-\frac{\pi \sin (n+1)\theta_0}{\sin \theta_0}\right)\\ 
+    &=-\pi \cos n \theta_0
+  \end{split}
+\]

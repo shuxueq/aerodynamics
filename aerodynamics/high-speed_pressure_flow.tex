@@ -1,0 +1,821 @@
+% !TEX root =../mechanics.tex
+%high-speed_presure_flow.tex
+%高速可压流动
+
+\chapter{高速可压流动}
+\section{热力学基础}
+
+\subsection{内能(internal energy)}
+对于遵守$P=\rho RT$的气体称为{\bfseries 热完全气体}
+\index{热完全气体}，这种理想化的
+完全气体，内能只计微观运动的平均动能，因此内能只与
+绝对温度$T$有关，单位完全气体的内能记为$e$，单位
+是$\mathrm{J /Kg}$．于是有
+\[
+	e=e(T)
+\]
+内能是与变化过程无关的参数．
+
+\subsection{焓(enthalpy)}
+焓表示单位质量气体的内能和压力能之和，用$h$表示
+\[
+	h=e+\frac{p}{\rho}
+\]
+其中$\frac{P}{\rho}$表示单位质量气体的压力能，对于
+完全气体，焓也取决于温度，所以焓也是一个状态参数．
+
+\subsection{热力学第一定律和比热}
+外界传递给一个封闭物质系统的热量等于系统内能的增量
+和系统对外界所做的机械功的总和，这就是热力学第一定律．
+
+对于单位质量的气体有
+
+\begin{equation}
+	\delta q =\mathrm{d}e +P \mathrm{d} \frac{1}{\rho}
+	\label{eq:4}
+\end{equation}
+$\frac{1}{\rho}$是单位质量气体所占的体积，称为比容．
+又
+\[
+	\mathrm{d}h =\mathrm{d} e+\mathrm{Pd}\frac{1}{\rho}+\frac{1}{\rho}\mathrm{d}P
+\]
+于是
+\[
+	\delta q =\mathrm{d} h-\frac{1}{\rho}\mathrm{d}P
+\]
+若对于等压过程 $\mathrm{d}P=0$，焓增量$\mathrm{d}h$就等于
+此过程张吸收的热量$\delta q$．若一个系统
+由于加给一微小的热量$\delta q$ 而升高了温度
+$\mathrm{d} T$，定义比值
+\[
+	\delta q /\mathrm{d}T
+\]
+为热容，单位J/K．单位质量上的热容为比热容，
+简称比热，单位 J/(Kg$\cdot$T)．在定容情况下，
+$\mathrm{d} \dfrac{1}{\rho}=0$，定压情况下，
+$\mathrm{d}P=0$，于是
+\begin{equation}
+	\begin{split}
+		C_v & =\left(\frac{\delta q}{\mathrm{d} T}\right)_{\rho=const}=\frac{\mathrm{d}e}{\mathrm{d}T} \\
+		C_P & =\left(\frac{\delta q}{\mathrm{d} T}\right)_{P=const}=\frac{\mathrm{d}h}{\mathrm{d}T}
+		\label{eq:5 }
+	\end{split}
+\end{equation}
+其中，$C_v$为比定容热容，$C_P$为比定压热容．取$T=0$时，
+$e=h=0$，于是
+\begin{align}
+	e & =C_vT  \\
+	h & =C_P T
+\end{align}
+将比定容热容和比定压热容之比称为
+比热，用$\gamma$表示，即
+\[
+	\gamma=\frac{C_P}{C_v}
+\]
+对于空气，$\gamma=1.4$．又
+\[
+	h=e+\frac{P}{\rho}
+\]
+有
+\[
+	C_P T=C_v T+\frac{P}{\rho}
+\]
+于是
+\[
+	C_P=C_v+\frac{P}{\rho T}=C_v+R
+\]
+因此，
+\[
+	h=C_P T=\frac{\gamma R}{\gamma-1}T=\frac{\gamma RT}{\gamma-1}=\frac{\gamma}{\gamma-1}\frac{P}{\rho}
+\]
+其中$C_v=\frac{R}{\gamma-1 }$，$C_P=\frac{\gamma R}{\gamma-1}$．
+
+\begin{notice}
+  {\bfseries 热完全气体(calorically perfect gas)}是
+	指$C_v$和$C_P$都是常数的气体．
+\end{notice}
+
+
+\subsection{热力学第二定律和熵(entropy)}
+热力学第二定律指明能量相互转化是有条件的，有方向的，即从
+一个方向的变化过程可以实现，而逆向的变化过程不能实现或者
+只能有条件的实现．
+
+定义单位质量的气体的熵增量$\mathrm{d} s$为单位质量气体
+的热量增量与绝对温度的比值，即
+\[
+	\mathrm{d} s=\frac{\delta q}{T}
+\]
+又
+\[
+	\delta q=\mathrm{d} e +P \mathrm{d} \frac{1}{\rho}
+\]
+于是，
+\begin{equation}
+	\begin{split}
+		\begin{WithArrows}[code-before = \color{blue}]
+			\mathrm{d} s &=\frac{\delta q}{T}=\frac{1}{T}(\mathrm{d} e +P \mathrm{d}  \frac{1}{\rho}) \\
+			&=\frac{1}{T}(\mathrm{d} C_vT+P \mathrm{d} \frac{1}{\rho})
+			\Arrow{$P=\rho RT$} \\
+			&=\frac{1}{T}C_v \mathrm{d}T+\frac{P}{T} \mathrm{d} \frac{1}{\rho} \\
+			&=\frac{1}{T}C_v \mathrm{d} T+\rho R \mathrm{d} \frac{1}{\rho} \\
+			&=\mathrm{d}\left(C_v \ln T+R\ln \frac{1}{\rho}\right)
+		\end{WithArrows}
+	\end{split}
+\end{equation}
+因此，熵是一个状态函数，当系统由状态1($s_1$,$P_1$,$\rho_1$,$T_1$)变化为状态2$(s_2$,$P_2$,$\rho_2$,$T_2)$时，
+过程的熵增量为
+\begin{equation}
+	\begin{split}
+		\Delta s=s_2-s_1 & =C_v\ln T_2+R\ln \frac{1}{\rho_2}-\left(C_v\ln T_1+R\ln \frac{1}{\rho_1}\right) \\
+		                 & =C_v \ln \frac{T_2}{T_1}+R\ln \frac{\rho_1}{\rho_2}
+	\end{split}
+	\label{eq:6}
+\end{equation}
+由$C_P=C_v+R$，$\gamma =\frac{C_P}{C_v}$，有
+\[
+	C_v=\frac{R}{\gamma-1}
+\]
+于是
+\begin{equation}
+	\begin{split}
+		\Delta s & =C_v\ln \frac{T_2}{T_1}+C_v(\gamma-1)\ln \frac{\rho_1}{\rho_2}                                        \\
+		         & =C_v \ln\left[\frac{T_2}{T_1}\cdot\left(\frac{\rho_1}{\rho_2}\right)^{\gamma-1}\right]                \\
+		         & =C_v \ln \left[\frac{T_2}{T_1}\left(\frac{\rho_1}{\rho_ 2}\right)^\gamma \frac{\rho_2}{\rho_1}\right] \\
+		         & =C_v \ln \left[\frac{P_2}{P_1}\left(\frac{\rho_1}{\rho_2}\right)^\gamma\right]
+	\end{split}
+\end{equation}
+上式对于不可逆状态依然适用，前提是热力学系统处于平衡状态．
+
+热力学第二定律指出，在绝热变化过程的孤立系统中，如果过程
+可逆，则熵值保持不变．如果过程不可逆，则熵必增加．
+
+一般来说，在流场的大部分区域，速度梯度和温度梯度并不是
+很大，流动过程可以近似看成是绝热的，熵增等于0，这样的流动称为
+等熵流(isentropical flow)．沿一条流线熵值保持不变的情况称为沿流线等熵．
+全流场熵值不变的流动称为均匀等熵流动．
+
+对于等熵流即绝热可逆流动有
+\[
+	\frac{P_2}{P_1}\left(\frac{\rho_1}{\rho_2}\right)^\gamma=1\Rightarrow
+	\frac{P_2}{\rho_2^\gamma}=\frac{P_1}{\rho_1^\gamma}=const
+\]
+
+\begin{notice}
+等熵流动就是绝热可逆流动．
+\end{notice}
+
+
+\section{一维等熵绝热流}
+气体参数发生在微小变化的扰动称为小扰动．小扰动的传播速度只
+取决于气体的性质及状态参数，而与何种扰源和其成因无关． 小扰动
+在气体中的传播速度习惯上称为{\bfseries 声速(speed of sound)}．
+
+考虑声波以速度$a$在空气中传播，声波向左传播并进入参数
+分别是$P$,$\rho$,$T$的静止气体，在声波之后，气体参数
+变成了$P+\mathrm{d}P $,$\rho+\mathrm{d}\rho$,$T+\mathrm{d}T $.
+选择声波前后的气体作为控制体{\color{red}如图}，由连续方程有
+\[
+  \rho a=(\rho+\mathrm{d}\rho)(a+\mathrm{d}a)
+\]
+展开并略去高阶项有
+\[
+  \rho a=\rho a+a \mathrm{d}\rho+\rho \mathrm{d}a 
+\]
+解得
+\[
+  a=-\rho \frac{\mathrm{d}a }{\mathrm{d}\rho}
+\]
+再列动量方程有
+\[
+  P+\rho a^2=(P+\mathrm{d}P)+(\rho+\mathrm{d}\rho)(a+\mathrm{d}a)^2
+\]
+展开并略去比二阶高的小量有
+\[
+  \mathrm{d}P=-2\rho a \mathrm{d}a-a^2 \mathrm{d}\rho
+\]
+解得
+\[
+  \mathrm{d}a =\frac{\mathrm{d}P+a^2 \mathrm{d}\rho}{-2a \rho}
+\]
+代入到
+\[
+  a=-\rho \frac{\mathrm{d}a}{\mathrm{d}\rho} 
+\]
+得到
+\[
+  a^2=\frac{\mathrm{d}P}{\mathrm{d}\rho}
+\]
+
+上述讨论中，流体流过声波是等熵的，因此压强对于密度的变化
+就是等熵的，可以将方程
+\[
+  a^2=\frac{\mathrm{d}P }{\mathrm{d}\rho}
+\]
+重写成
+\[
+  a^2=\left(\frac{\partial P }{\partial \rho}\right)_s
+\]
+
+假设气体是量热完全气体，满足方程
+\[
+  \frac{{P_1}}{P_2}=\left(\frac{\rho_1}{\rho_2}\right)^\gamma
+\]
+又
+\[
+  \frac{P}{\rho^\gamma}=const=C 
+\]
+或者写成
+\[
+  P=C \rho^\gamma
+\]
+于是
+\[
+  \left(\frac{\partial P }{\partial \rho}\right)_s=C \gamma \rho^{\gamma-1}
+\]
+再将
+\[
+  C=\frac{P}{\rho^\gamma}
+\]
+代入，得到
+\[
+  \left(\frac{\partial P }{\partial \rho}\right)_s=\frac{P}{\rho^\gamma}\gamma \rho^{\gamma-1}
+  =\gamma \frac{P}{\rho}=\gamma RT 
+\]
+
+\begin{notice}
+$a^2=\gamma R T $是量热完全气体等熵流动的计算公式，说明声速
+仅仅只是温度$T$的函数。
+\end{notice}
+
+上式中定义的变量 $ a $ 就是小扰动传播的速度——声速．
+
+\subsection{能量方程}
+
+对于一维等熵绝热流，能量方程可由欧拉方程并利用等熵关系式沿
+流线积分求出．
+
+由一维伯努利方程，忽略重力势
+\[
+	\frac{1}{2 }\mathbf{V}^2+\int \mathrm{d}\frac{P}{\rho}=C
+\]
+因为沿流线等熵，由等熵关系
+\[
+	\frac{P}{\rho^\gamma}=C
+\]
+有
+\[
+	\frac{1}{2 }V^2+\int \mathrm{d}\frac{P}{\rho}=\frac{1}{2 }V^2+\frac{\gamma}{\gamma-1 }\frac{P}{\rho}
+\]
+又
+\[
+	h=\frac{\gamma}{\gamma-1 }\frac{P}{\rho}
+\]
+于是
+\[
+	\frac{1}{2 }V^2+h=C
+\]
+对于定常绝热流，上述方程不论是否等熵，在形式上都成立，也就是绝热流
+动中粘性摩擦并不改变动能和焓的总和，而是将一部分动能转化为
+焓． 上式还可以改写成
+\begin{equation}
+	\begin{split}
+		\frac{1}{2 }V^2+\frac{\gamma}{\gamma-1}RT & =
+		\frac{1}{2 }V^2+\frac{\gamma}{\gamma-1}\frac{P}{\rho}                                \\
+		                                          & =\frac{1}{2 }V^2+\frac{a^2}{\gamma-1} =C
+	\end{split}
+	\label{eq:8 }
+\end{equation}
+从中可以看出，对于定常绝热流，当沿流线速度变大的时候
+温度，声速，焓都要减小，但是动能和焓的总和不变．
+
+\subsection{参数间的基本关系式}
+\begin{enumerate}
+	\item 驻点 \\
+	      指流速沿流线等熵地降为0的那一点，该点的参数称为
+	      驻点参数，或者总参数．对应这个状态的焓，温度，压强，
+	      密度分别称为总焓，总温，总压，总密度。用$h_0$,$T_0$,$P_0$,$\rho_0$
+        表示，驻点状态的声速用$a_0$表示．
+	      \begin{notice}
+		      总温和总焓是指速度绝热地降为0的那点的温度和焓值．总密度
+		      和总压
+		      则是指速度等熵地降为0的那点的密度和压强．
+	      \end{notice}
+	      于是上述能量方程就可以改写为
+	      \begin{empheq}[box=\widefbox]{align}
+		      \frac{1}{2 }V^2+\frac{\gamma}{\gamma-1}\frac{P}{\rho} & =\frac{\gamma}{\gamma-1}\frac{P_0}{\rho_0} \\
+		      \frac{1}{2 }V^2+h                                     & =h_0                                       \\
+		      \frac{1}{2 }V^2+\frac{a^2}{\gamma-1}                  & =a_0^2                                     \\
+		      \frac{1}{2 }V^2 +\frac{\gamma RT }{\gamma-1 }         & =\frac{\gamma}{\gamma-1 }RT_0
+	      \end{empheq}
+	      显然对于一维定常绝热等熵流，$h_0$,$P_0$,$T_0$,$\rho_0$和$a_0$
+	      沿同一条流线恒等于常数而不发生改变，和驻点参数对应的是流动过程中任意一点
+	      处的当地流动参数$h$,$P$,$T$,$\rho$等称为静参数，即静焓，静压，静温，静密度．
+	      因此上述方程也可以写成
+	      \[
+		      \frac{1}{2 }\frac{V^2}{\gamma RT}+\frac{1}{\gamma-1 }=\frac{1}{\gamma-1 }\frac{T_0}{T }
+	      \]
+	      也就是
+	      \begin{gather*}
+		      1+\frac{\gamma-1 }{2 }\frac{V^2}{a^2}=1+\frac{\gamma-1 }{2 }M^2=\frac{T_0}{T }  \\
+		      \frac{1}{2 }\frac{V^2}{h^2}+1 =\frac{h_0}{h }，(h=\frac{\gamma}{\gamma-1 }RT)                   \\
+		      \Rightarrow \frac{\gamma-1 }{2 }\frac{V^2}{\gamma RT }+1
+		      =\frac{h_0}{h }                                                  \\
+		      \Rightarrow \frac{\gamma-1 }{2 }\frac{V^2}{a^2}+1
+		      =\frac{h_0}{h }
+	      \end{gather*}
+	      也就是
+	      \begin{empheq}[box=\bluebox]{equation}
+		      \frac{h_0}{h }=1+\frac{\gamma-1 }{2 }M^2
+	      \end{empheq}
+	      利用等熵关系$\frac{P}{\rho^\gamma}=C $可得
+	      \[
+		      \frac{P}{\rho}=C \rho^{\gamma-1}
+	      \]
+	      于是有
+	      \begin{align*}
+		      \frac{1}{2 }V^2+\frac{C \gamma}{\gamma-1 }\rho^{\gamma-1 }             & =\frac{C \gamma}{\gamma-1 }\rho_0^{\gamma-1 }               \\
+		      \Rightarrow \frac{1}{2 \rho^{\gamma-1}}V^2 +\frac{C \gamma}{\gamma-1 } & =\frac{C \gamma}{\gamma-1 }(\frac{\rho_0}{\rho})^{\gamma-1}
+	      \end{align*}
+	      又$\rho^{\gamma-1}=\frac{P}{C \rho}=\frac{RT }{C }$
+	      \[
+		      \Rightarrow \frac{C}{2RT }V^2+\frac{C \gamma}{\gamma-1}=\frac{C \gamma }{\gamma -1}(\frac{\rho_0}{\rho}^{\gamma-1})
+	      \]
+	      也就是
+	      \[
+		      \frac{1}{2\gamma RT }V^2+\frac{1}{\gamma-1}=\frac{1}{\gamma-1 }(\frac{\rho_0}{\rho})^{\gamma-1}
+	      \]
+	      也就是
+	      \begin{empheq}[box=\bluebox]{equation}
+		      \frac{\rho_0}{\rho}=\left(1+\frac{\gamma-1 }{2 }M^2\right)^{\frac{1}{\gamma-1}}
+		      \label{eq:9}
+	      \end{empheq}
+	      再利用等熵关系有
+	      \begin{equation}
+		      \frac{\rho_0}{\rho}=\left(\frac{P_0}{P }\right)^{\frac{1}{\gamma}}
+		      \label{eq:10}
+	      \end{equation}
+	      于是
+	      \begin{empheq}[box=\bluebox]{equation}
+		      \begin{split}
+			      \frac{P_0}{P } & =\left[\left(1+\frac{\gamma-1 }{2 }M^2\right)^{\frac{1}{\gamma-1 }}\right]^\gamma \\
+			                     & =\left(1+\frac{\gamma-1 }{2 }M^2\right)^{\frac{\gamma}{\gamma-1}}
+		      \end{split}
+		      \label{eq:11}
+	      \end{empheq}
+	      其中
+	      \begin{empheq}[box=\bluebox]{equation*}
+		      M=\frac{V}{a}
+	      \end{empheq}
+	      称为流动马赫数，是反映流体压缩性能大小的相似准则，是当地流动速度和
+	      当地声速的比值．
+        \begin{notice}
+        当讨论飞机或者其他飞行物体时，马赫数就是这个物体的速度除以自由来流
+        的声速，而不是流过该物体的流体的声速．(自由来流就是远前方的气流，流过
+        该物体的流体的温度和远前方气流的速度并不相同，一般要高些)
+
+        马赫数是流
+        场的当地性质，流场每个点的马赫数都可能不同．
+
+        马赫数还反映了流体内能和动能的比值，即
+        \[
+          \frac{\frac{V^2}{2}}{e}=\frac{\gamma(\gamma-1)}{2}M^2
+        \]
+        \end{notice}
+        
+	\item 临界状态 \\
+	      临界状态是指当地流速等于当地声速的状态，也称为临界点，用下标* 表示，显然
+	      在临界状态，当地马赫数$M=1 $，式
+	      \[
+		      \frac{V^2}{2 }+\frac{a^2}{\gamma-1}=\frac{a_0^2}{\gamma-1}
+	      \]
+	      可以写成
+	      \[
+		      \frac{V_*^2}{2 }+\frac{a_*^2}{\gamma-1 }=\frac{a_0^2}{\gamma-1 }
+	      \]
+	      又
+	      \[
+		      V_*=a_*
+	      \]
+	      于是
+	      \begin{empheq}[box=\bluebox]{equation*}
+		      a_*^2=\frac{2}{\gamma+1 }a_0^2
+	      \end{empheq}
+	      式
+	      \[
+		      \frac{T_0}{T }=1+\frac{\gamma-1 }{2 }M^2
+	      \]
+	      在临界状态下可以改写成
+	      \[
+		      \frac{T_0}{T_* }=1+\frac{\gamma-1 }{2 }=\frac{\gamma+1 }{2 }
+	      \]
+	      定义速度系数$\lambda$为
+	      \[
+		      \lambda =\frac{V}{a_* }
+	      \]
+	      由于
+	      \begin{equation}
+		      \begin{split}
+			      M^2=\frac{V^2}{a^2} & =\frac{V^2}{a_*^2}
+			      \frac{a_*^2}{a_0^2} \frac{a_0^2}{a^2}                                           \\
+			                          & =\lambda^2 \frac{2}{\gamma+1} \frac{T_0}{T }
+			      ，(a=\sqrt{\gamma RT } )                                                         \\
+			                          & =\lambda^2 \frac{2}{\gamma+1 }(1+\frac{\gamma-1 }{2 }M^2)
+		      \end{split}
+		      \label{eq:12}
+	      \end{equation}
+	      于是
+	      \[
+		      M^2=\frac{\frac{2}{\gamma+1 }\lambda^2}{1-\frac{\gamma-1 }{\gamma+1 }\lambda^2}
+	      \]
+	      从式
+	      \[
+		      \frac{T_0}{T }=1+\frac{\gamma-1 }{2 }M^2
+	      \]
+	      中可以看出，当$T\rightarrow 0 $时，$M\rightarrow \infty$，
+	      而$\lambda$趋于有限值，即
+	      \[
+		      \lambda_{\max}=\sqrt{\frac{\gamma+1 }{\gamma-1 }}
+	      \]
+	      使用速度系数$\lambda$可得
+	      \[
+		      \frac{T_0}{T }=1+\frac{\gamma-1 }{2 }M^2=1-\frac{\gamma-1 }{\gamma+1 }\lambda^2
+	      \]
+	      类似地
+	      \begin{equation}
+		      \begin{split}
+			      \frac{P}{P_0}        & =
+			      \left(1-\frac{\gamma-1 }{\gamma+1 }\lambda^2\right)^{\frac{\gamma}{\gamma-1}} \\
+			      \frac{\rho}{\rho_0 } & =
+			      \left(1-\frac{\gamma-1 }{\gamma+1 }\lambda^2\right)^{
+			      \frac{1}{\gamma-1}
+			      }
+		      \end{split}
+		      \label{eq:13}
+	      \end{equation}
+	      临界状态下，临界参数和总参数的对应关系如下
+	      \begin{empheq}[box=\widefbox]{align}
+		      \frac{T_*}{T_0}         & =1-\frac{\gamma-1}{\gamma+1 }                                         \\
+		      \frac{P_* }{P_0}        & =\left(1-\frac{\gamma-1 }{\gamma+1 }\right)^{\frac{\gamma}{\gamma-1}} \\
+		      \frac{\rho_* }{\rho_0 } & =\left(1-\frac{\gamma-1 }{\gamma+1 }\right)^{\frac{1}{\gamma-1 }}
+	      \end{empheq}
+	      从式
+	      \[
+		      \frac{1}{2 }V^2+\frac{\gamma}{\gamma-1 }RT=\frac{\gamma}{\gamma-1 }RT_{0}
+	      \]
+	      可以看出，当$T=0 $时速度达到最大，即
+	      \[
+		      V_{\max}=\sqrt{\frac{2\gamma}{\gamma-1 }RT_0}=\sqrt{\frac{2a_0^2}{\gamma-1 }}
+	      \]
+	      这种状态是一种假想状态，意味着给定一个总温后所能达到的最大流动
+	      速度，是一个上限值，即流体中的全部焓转换成了动能．
+
+	      若流动过程绝热，则总温不变，$T_{01}=T_{02}$．对于等熵绝热流
+	      总压也保持不变，$P_{01}=P_{02}$．而对于一个绝热过程，如果
+	      变化过程中有摩擦等损失存在，则该过程是不可逆过程，熵必有所增加
+	      ，必然表现为$P_{01}>P_{02}$，即总压有所损失，记$\sigma=\frac{P_{02}}{P_{01}}$
+	      为总压损失比．
+\end{enumerate}
+
+\begin{notice}
+	关于总参数和静参数的理解
+
+	如果飞机飞行高度在10000英尺，速度为0.8马赫．那么
+	10000英尺高度的压强就是静参数，用皮托管测到的压强
+	就是总参数(皮托管测量到的压强是速度为零的压强)．
+	将飞机静止来看，远前方的气流就是运动的，就是静参数．
+\end{notice}
+
+\section{马赫波和膨胀波}
+亚声速流场中的小扰动可以遍及全场，在声速和超声速流动中小扰动不会干扰到干扰源
+的上游．
+
+超声速气流受到小扰动而使气流方向发生微小变化，扰动的界面就是马赫波．
+设超声速定常直匀流沿壁面流动，若壁面外折\marginpar{解释壁面内折和
+	外折的内容(插图)}伴随着流速增大，压强，密度，温度均减小，此时气流发生膨胀
+，此时的马赫波称为膨胀马赫波． 壁面内折，则伴随着流速减小，压强，密度，温度
+均增大，气流发生压缩，称为压缩马赫波． 气流通过马赫波后壁面上的压强系数
+\[
+	C_p=\frac{(P+\mathrm{d}P)-P}{\frac{1}{2 }\rho V^2}=
+	\frac{\mathrm{d}P }{\frac{1}{2 }\frac{P}{RT }M^2a^2 }=-\frac{2}{\sqrt{M^2-1} }\mathrm{d}\theta
+\]
+
+对于大角度超声速气流发生折转的情况，流动参数与方向偏角之间的关系通过
+膨胀波和激波建立．
+
+膨胀波是超声速气流的基本变化之一，是一种压强下降，密度下降，而流速上升
+的过程． 由于气流经过每一道膨胀马赫波气流参数只发生微小变化，因此穿过
+整个扇形膨胀波时气流参数必是连续变化的，这种连续变化过程必是等熵的．
+所以气流经过膨胀波是可逆等熵过程，对于一定的来流条件，波后气流只取决于
+总的外折角$\theta$，对
+\[
+	V=aM
+\]
+取全微分，有
+\[
+	\mathrm{d}V=M \mathrm{d}a+a \mathrm{d}M
+\]
+也就是
+\[
+	\frac{\mathrm{d}V }{aM }=\frac{\mathrm{d}a }{a }+\frac{\mathrm{d}M }{M }\Rightarrow
+	\frac{\mathrm{d}V }{V }=\frac{\mathrm{d}a }{a }+\frac{\mathrm{d}M }{M }
+\]
+而
+\[
+	\frac{\mathrm{d}V }{V }=\frac{\mathrm{d}\sqrt{\gamma RT } }{\sqrt{\gamma RT } }=
+	\frac{\mathrm{d}M }{M }+\frac{\mathrm{d} T }{2T }，(a=\sqrt{\gamma RT } )
+\]
+又
+\[
+	\frac{\mathrm{d} M }{M }=\frac{1+\frac{\gamma-1 }{2 }M^2}{\sqrt{M^2-1 } }\mathrm{d}\theta
+\]
+当壁面外折角由$0$增大到$\theta $时，马赫数由$M_1$增大到$M_2$有
+\[
+	\theta=\int_{M_1}^{M_2}\frac{\sqrt{M^2-1} }{(1+\frac{\gamma-1 }{2 }M^2)M}\mathrm{d}M
+\]
+积分得到(过程参见\ref{马赫波积分})
+\begin{empheq}[box=\widefbox]{align*}
+	\theta  =&\left[\sqrt{\frac{\gamma+1 }{\gamma-1 }} \arctan\sqrt{\frac{\gamma-1 }{\gamma+1 }(M_2^2-1)} -\arctan\sqrt{M_2^2-1} \right] \\
+	-&\left[\sqrt{\frac{\gamma+1 }{\gamma-1 }} \arctan\sqrt{\frac{\gamma-1 }{\gamma+1 }(M_1^2-1)} -\arctan\sqrt{M_1^2-1} \right]
+\end{empheq}
+这样给定$M_1$和$\theta$后就可以求出$M_2$，在膨胀过程中总温，总压，总密度均不变，于是
+便可以求出$\frac{P_2}{P_1}$,$\frac{T_2}{T_1}$,$\frac{\rho_2}{\rho_1}$．
+若指定气流时从$M_1=1 $的声速流开始膨胀的，那么达到某个大于1的马赫数$M$
+的外折角$\theta_* $
+\begin{empheq}[box=\bluebox]{equation*}
+	\theta_*=\sqrt{\frac{\gamma+1 }{\gamma-1 }} \arctan\sqrt{\frac{\gamma-1 }{\gamma+1 }(M_2^2-1)}
+	-\arctan\sqrt{M_2-1}
+\end{empheq}
+于是
+\[
+	\theta_{*\max}=\lim_{M\rightarrow \infty}\theta_*=\left(\sqrt{\frac{\gamma+1 }{\gamma-1 }} -1\right)\frac{\pi}{2 }
+\]
+对于空气，$\theta_{*\max}=130.45^\circ$，此时已经膨胀到温度，压强，密度均降为
+$0$的真空状态．
+
+实际上，根据能量方程， 膨胀过程实际上时气体的焓值转换为动能的过程，真空状态
+其焓值已经耗尽，因此不能再进行膨胀了．
+\begin{example}
+	高速导弹在滞止点的温度和压强分别是518.8K和7.8atm，计算这一点
+	的密度．
+
+	由完全气体状态方程
+	\[
+		P=\rho R T
+	\]
+	得到
+	\[
+		\rho_0 =\frac{P_0}{R T_0 }=\frac{7.8\times 1.01\times 10^5 }
+		{518.8\times 287.05}=5.29 \text{Kg/m}^3
+	\]
+\end{example}
+
+\begin{example}
+	激波前气体温度和压强分别是288K和1atm;激波后气体温度和压强分别是
+	690K和8.656atm．计算经过激波前后焓，熵，内能的变化．
+
+	\[
+		C_P=\frac{\gamma R}{\gamma-1}=\frac{1.4\times 287.05}{1.4-1}=1004.675
+	\]
+	\[
+		C_v=\frac{R}{\gamma-1}=\frac{287.05}{1.4-1}=717.625
+	\]
+	\begin{equation*}
+		\begin{split}
+			\Delta h & =h_2-h_1=C_P(T_2-T_1)=403879.35\text{J}        \\
+			\Delta e & =e_2-e_1=C_v(T_2-T_1)=288485.25\text{J}        \\
+			\Delta s & =s_2-s_1=C_v \ln \frac{T_2}{T_1}+C_v(\gamma-1)
+			\ln \frac{P_2T_1}{P_1T_2}=995.41
+		\end{split}
+	\end{equation*}
+\end{example}
+
+\begin{example}
+	考虑一个等熵流经过机翼，来流的状态是$T_\infty=245$K，
+	$P_\infty=4.35\times 10^4 $pa，在机翼上一点的压强是
+	$3.6\times 10^4 $pa．计算这一点的密度．
+
+	由等熵关系
+	\[
+		\frac{P_2}{P_1}=\left(\frac{T_2}{T_1}\right)^{\gamma-1}
+	\]
+	得到机翼上该点的温度
+	\[
+		T=(\frac{P}{P_\infty})^{\frac{1}{\gamma-1}}T_\infty=114.93\text{K}
+	\]
+	于是
+	\[
+		\rho =\frac{P}{RT}=\frac{3.6\times 10^4}{287.05\times 114.93}=1.09
+		\text{Kg/m}^3
+	\]
+\end{example}
+
+\section{正激波}
+在流动过程中，气流的主要参数有显著的，突跃的变化的那一个地方称为激波，是在同一个位置有
+无穷多压缩马赫波叠加而成，当激波的波阵面与来流方向垂直时，称为正激波．
+如右图，\marginpar{插图}波前参数为$P_1$,$\rho_1$,$V_1$，波后参数为
+$P_2$,$\rho_2$,$V_2$，由连续方程有
+\[
+	\rho_1V_1=\rho_2V_2
+\]
+因为激波很薄，截面积基本上没有发生变化，由动量方程有
+\[
+	\rho_2V_2^2-\rho_1V_1^2=P_1-P_2
+\]
+即
+\[
+	\rho_2V_2^2+P_2=\rho_1V_1^2+P_1
+\]
+又波前波后总能量相等，于是有
+\[
+	\frac{1}{2 }V_1^2+\frac{a_1^2}{\gamma-1 }=\frac{1}{2 }V_2^2+\frac{a_2^2}{\gamma-1 }=
+	\frac{\gamma+1 }{2(\gamma-1)}a_*^2
+\]
+在
+\[
+	\rho_2V_2^2+P_2=\rho_1V_1^2+P_1
+\]
+左边除以$\rho_2V_2$，右边除以$\rho_1V_1$得到
+\[
+	V_2+\frac{P_2}{\rho_2V_2}=V_1+\frac{P_1}{\rho_1V_1}
+\]
+于是
+\begin{equation}
+	\begin{split}
+		V_1-V_2 & =\frac{P_2}{\rho_2V_2}-\frac{P_1}{\rho_1V_1}                                                     \\
+		        & =\frac{a_2^2}{\gamma V_2}-\frac{a_2^2}{\gamma V_1 }，\left(\frac{P}{\rho}=RT，a^2=\gamma RT\right)
+	\end{split}
+	\label{eq:14}
+\end{equation}
+又
+\[
+	\frac{1}{2 }V^2+\frac{a^2}{\gamma-1 }=\frac{a_0^2}{\gamma-1 }=\frac{1}{\gamma-1 }
+	\frac{\gamma+1 }{2 }a_*^2=\frac{\gamma+1 }{2(\gamma-1 )}a_*^2，(a_*^2=\frac{2}{\gamma+1 }a_0^2)
+\]
+有
+\begin{equation}
+	\begin{split}
+		a_1^2 & =\frac{\gamma+1 }{2 }a_*^2-\frac{\gamma-1 }{2 }V_1^2 \\
+		a_2^2 & =\frac{\gamma+1 }{2 }a_*^2-\frac{\gamma-1 }{2 }V_2^2
+	\end{split}
+	\label{eq:15 }
+\end{equation}
+代入到
+\[
+	V_1-V_2=\frac{a_2^2}{\gamma V_2}-\frac{a_1^2}{\gamma V_1 }
+\]
+有
+\begin{equation}
+	\begin{split}
+		V_1-V_2 & =\frac{\gamma+1 }{2\gamma V_2}a_*^2
+		-\frac{\gamma-1 }{2\gamma}V_2-\frac{\gamma+1 }{2\gamma V_1}a_*^2+
+		\frac{\gamma-1 }{2\gamma}V_1                            \\
+		        & =\frac{\gamma+1 }{2\gamma}a_*^2\left(
+		\frac{1}{V_2}-\frac{1}{V_1}\right)+
+		\frac{\gamma-1 }{2\gamma}(V_1-V_2)                      \\
+		        & =\left(\frac{\gamma+1 }{2\gamma}\frac{a_*^2 }
+		{V_1V_2}+\frac{\gamma-1 }{2\gamma}\right)(V_1-V_2)
+	\end{split}
+	\label{eq:16}
+\end{equation}
+又$V_1\neq V_2$，只能是
+\[
+	\frac{\gamma+1 }{2\gamma}\frac{a_*^2 }{V_1V_2}+\frac{\gamma-1 }{2\gamma}=1
+\]
+即
+\begin{empheq}[box=\bluebox]{equation}
+	\frac{a_*^2}{V_1V_2}=1 \text{或} a_*^2=V_1V_2
+\end{empheq}
+用速度系数表示
+\begin{empheq}[box=\bluebox]{equation*}
+	\lambda_1\lambda_2=1
+\end{empheq}
+上式就是普朗特激波公式，即正激波前后的速度乘积为定值，即临界速度的平方．
+\begin{notice}
+	激波并没有加热或者降温气体，因此气体流过激波是一个绝热过程，但是
+	不是等熵过程．
+\end{notice}
+
+
+从上式可以看出：超声速气流$(\lambda_1 >1)$经过正激波后变为亚声速气流
+$(\lambda_2 <1)$，而且速度系数$\lambda_1$越大则速度系数$\lambda_2$就越小．
+应当指出，从亚声速流经过正激波变成超声速流是不可能的．
+
+将式
+\[
+	\lambda^2=\frac{(\gamma+1)M^2}{2+(\gamma-1)M^2}
+\]
+代入到
+\[
+	\lambda_1\lambda_2=1
+\]
+即可得到
+\begin{empheq}[box=\widefbox]{equation* }
+	M_2^2=\frac{1+\frac{\gamma-1 }{2 }M_1^2 }
+	{\gamma M_1^2-\frac{\gamma-1 }{2 }}
+\end{empheq}
+当$M_1=1 $时，$M_2=1 $；当$M_1\rightarrow \infty$，
+$M_2\rightarrow\sqrt{\frac{\gamma-1 }{2\gamma}}$．
+
+由连续方程$\rho_1V_1=\rho_2V_2 $和
+\[
+	\lambda^2=\frac{(\gamma+1)M^2}{2+(\gamma-1)M^2}
+\]
+可以得到正激波前后的密度比
+\begin{empheq}[box=\widefbox]{equation* }
+	\frac{\rho_2}{\rho_1}=\frac{V_1}{V_2}=
+	\frac{\lambda_1}{\lambda_2}=\lambda_1^2
+	=\frac{(\gamma+1)M_1^2}{(\gamma-1)M_1^2+2 }
+\end{empheq}
+再由过程的绝热性，$T_{01}=T_{02}$，以及静温和总温之间的关系
+可以得到正激波前后的温度比为
+\begin{empheq}[box=\widefbox]{equation*}
+	\frac{T_2}{T_1}=\frac{T_{01}}{T_1 }\cdot \frac{T_2}{T_{02}}
+	=\frac{2+(\gamma-1)M_1^2}{(\gamma+1)M_1^2}
+	\left(\frac{2\gamma}{\gamma-1 }M_1^2-\frac{\gamma-1 }{\gamma+1 }\right)
+\end{empheq}
+于是正激波前后的压强比为
+\begin{empheq}[box=\widefbox]{equation*}
+	\frac{P_2}{P_1}=\frac{\rho_2 T_2}{\rho_1 T_1}=
+	\frac{2\gamma}{\gamma+1 }-\frac{\gamma-1 }{\gamma+1}
+\end{empheq}
+也可以写成
+\begin{empheq}[box=\widefbox]{equation* }
+	\frac{\Delta P }{P_1}=\frac{P_2-P_1}{P_1 }\frac{2\gamma }{\gamma+1 }(M_1^2-1)
+\end{empheq}
+
+因为流动时超声速，$M_1>1 $，所以$\Delta P>0 $
+
+超声速气流经过正激波的变化是绝热不等熵的．客观上，
+激波层内速度梯度非常大，而实际流体总有粘性，因此必有摩擦发生
+，所以经过激波熵必有所增加．
+
+正激波前后总压变化为
+\begin{empheq}[box=\widefbox]{equation*}
+	\sigma=\frac{P_{02}}{P_{02}}=
+	\left[1+\frac{2\gamma}{\gamma+1 }(M_1^2-1)\right]^{-\frac{1}{\gamma-1 }}
+	-\left[\frac{(\gamma+1)M_1^2}{(\gamma-1)M_1^2+2 }\right]^{\frac{\gamma}{\gamma-1 }}
+\end{empheq}
+
+因为过程绝热，总温相等，所以总密度之比和总压之比相等． 上述
+正激波前后关系式说明，正激波前后流动的参数的比值都只取决于
+波前的马赫数$M_1$和比热比$\gamma$． 而马赫数$M_1$值越大，
+激波突跃变化就越强，熵增也就越大．
+
+\begin{notice}
+	不论是正激波还是斜激波，激波前都是超声速流．
+	斜激波后一般还是超声速，但是马赫数要下降．
+	正激波后是亚声速流．
+\end{notice}
+
+下面总结讨论的气体如无特别指出都是量热完全气体．
+\begin{summary}
+	\begin{enumerate}
+		\item 满足$P=\rho R T $的气体叫做{\color{red}理想气体或者热完全气体}．
+		\item 定压热容$C_P$和定容热容$C_v$都是常数的气体叫做{\color{red}量热
+		      完全气体}．
+		\item {\color{red}绝热}是一个过程，即在这个过程中不从外界吸热也不向
+		      外界放热，绝热过程总温不变，总焓和总内能也不变．
+		\item {\color{red}等熵}是一个过程，即在这个过程中熵增为0，该过程全流场总压和
+		      总密度都是常数．
+		\item {\color{red}可逆过程}是指气体从状态1变化到状态2，然后在从状态2变回
+		      状态1的过程对外界没有造成任何影响．强调是否造成影响的过程是从状态
+		      2变回状态1的过程．
+		\item 气流流过激波的过程是一个绝热过程(时间很短，与外界没有热交换)，
+		      但不等熵．
+		\item 流过激波后，压强，密度，温度，熵都要{\color{red}增加};马赫数，速度和总压
+		      {\color{red}降低};总温和总焓
+		      {\color{red}不变}．
+		\item 量热完全气体的绝热过程，内能和焓都只是温度的函数，满足
+		      \begin{empheq}[box=\bluebox]{align*}
+			      e&=e(T)=C_v T \\
+			      h&=h(T)=C_P T
+		      \end{empheq}
+		\item {\color{red}流动定常绝热}，满足
+		      \begin{empheq}[box=\bluebox]{equation*}
+			      \frac{1}{2 }V^2+h=h_0
+		      \end{empheq}
+		\item {\color{red}声速}计算公式
+		      \begin{empheq}[box=\bluebox]{equation*}
+			      a=\gamma R T
+		      \end{empheq}
+		\item {\color{red}流动等熵}则满足
+		      \begin{empheq}[box=\bluebox]{equation*}
+			      \frac{P_2}{P_1}=\left(\frac{\rho_2}{\rho_1}\right)^\gamma
+			      =\left(\frac{T_2}{T_1}\right)^{\gamma-1}
+		      \end{empheq}
+		\item {\color{red}熵增}的计算
+		      \begin{empheq}[box=\bluebox]{equation*}
+			      \Delta s=s_2-s_1=C_v \ln \frac{T_2}{T_1}+R \ln \frac{\rho_1}{\rho_1}
+		      \end{empheq}
+		      或
+		      \begin{empheq}[box=\bluebox]{equation*}
+			      \Delta s=s_2-s_1=C_P \ln \frac{T_2}{T_1} -R \ln \frac{P_2}{P_1}
+		      \end{empheq}
+	\end{enumerate}
+\end{summary}
+
+
+
+
+

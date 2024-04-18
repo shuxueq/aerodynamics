@@ -1,0 +1,113 @@
+% ! TEX root = ../mechanics.tex
+
+\chapter{不可压无粘流}
+无粘流的动量方程就是欧拉方程．
+
+对于不可压定常，无旋流的伯努利方程是
+\[
+	\frac{1}{2}\rho V^2+P +\rho U=
+	\text{常数}
+\]
+上式左边分别是单位质量流体所具有的动能，压力
+能，和位能(重力势)，这三种能量统称为机械能．
+它们三者之间可以相互转换，但是总和是保持不变的．
+
+\begin{notice}
+	在空气流动问题中，重力(重力势)可以忽略，于是伯努利方程
+	可以写成
+	\[
+		P+\frac{1}{2}\rho V^2=\text{常数}
+	\]
+	其中，$\frac{1}{2}\rho V^2$称为动压，
+	$P$称为静压，等号右边的常数称为总压($P_0$)．
+	总压是无粘流速度为零的点(驻点)的压强．
+\end{notice}
+
+对于有旋流动，伯努利方程的条件是沿流线成立，即
+同一条流线总压相等．
+
+\section{理想不可压无旋流动的控制方程}
+不可压位流的控制方程是
+\[
+	\frac{\partial ^2 \Phi}{\partial x^2}+
+	\frac{\partial ^2 \Phi}{\partial y^2}+
+	\frac{\partial ^2 \Phi}{\partial z^2}=
+  0 
+\]
+称为拉普拉斯方程．
+
+{\bfseries 边界条件\index{边界条件}}就是流场的边界对流动
+规定的条件．边界条件有三种，分别是
+\begin{enumerate}
+  \item 第一类边值问题，又称狄利克雷问题，
+    即在边界上给定$\Phi$的值．
+  \item 第二类边值问题，又称纽曼问题，
+    即在边界上给定$\frac{\partial \Phi}{\partial n }$
+    的值．
+  \item 第三类边值问题，即混合边值问题，又称庞加莱问题，
+    即在一部分边界上给定$\Phi$值，另一部分边界
+    给定$\frac{\partial \Phi}{\partial n }$值． 
+\end{enumerate}
+对于理想不可压流的平面定常无旋流动中流函数满足的控制
+方程是
+\[
+  \frac{\partial ^2 \Psi}{\partial x^2}+
+  \frac{\partial ^2 \Psi }{\partial y^2}=
+  0 
+\]
+\begin{note}
+ 拉普拉斯方程是一个线性方程，它的解满足叠加定理．
+\end{note}
+
+\section{拉普拉斯方程的基本解}
+\subsection{直匀流}
+{\bfseries 直匀流(uniform stream)\index{直匀流}}
+是一种最简单的无旋流动，其中任何一点的流速都是一样的．
+它的流函数是
+\[
+  \Phi=ax+by
+\]
+速度分量是
+\begin{equation*}
+  \begin{cases}
+    u&=\frac{\partial \Phi}{\partial x}=a \\ 
+    v&=\frac{\partial \Phi}{\partial y}=b
+  \end{cases}
+\end{equation*}
+流函数是
+\[
+  \Psi=-bx+ay
+\]
+
+\subsection{点源}
+{\bfseries 正源(source)\index{点源}}是从流场某点
+有一定的流量流向四面八方的流动．{\bfseries
+负源(sink)}则相反，也称为汇．
+
+\begin{note}
+ 点源流动只有径向速度$V_r$，没有周向速度$V_\theta$．
+\end{note}
+
+记半径$r$处的流速为$V_r$，则源的总体积流量是$Q=2
+\pi r V_r$，是一个常数．
+所以
+\[
+  V_r=\frac{Q}{2\pi}\frac{1}{r }=\frac{Q}{2\pi}
+  \frac{1}{\sqrt{x^2+y^2}}
+\]
+\begin{note}
+ 源的径向流速与$\theta$无关，$Q$称为源强．
+\end{note}
+点源的流函数是
+\[
+  \Psi=\frac{Q}{2\pi}\theta=\frac{Q}{2\pi}\arctan
+  \left(\frac{y}{x}\right)
+\]
+
+点源的位函数是
+\[
+  \Phi=\frac{Q}{2\pi}\ln r =\frac{Q}{2\pi}
+  \ln \sqrt{x^2+y^2} 
+\]
+
+

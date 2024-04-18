@@ -1,0 +1,212 @@
+% ! TEX root = ../mechanics.tex
+
+\chapter{场论基础知识}
+
+在介绍场论基础知识之前，这里不加约定地
+将速度场$\mathbf{V}$认为是矢量场，而密度场
+$\rho$，压强场$P$，温度场$T$等是标量场．如无
+特殊说明，均认为上述参数是定常的．在引入新的
+场变量时，用加粗字母表示矢量，不加粗字母表示数量．
+比如$\mathbf{V}$时矢量场，但是$V$时标量场．
+\section{梯度，旋度，散度}
+\subsection{梯度计算}
+对于标量场 $\rho=\rho(x,y,z)$，它的
+梯度是
+$$
+    \nabla \rho=\frac{\partial \rho}{\partial x}\mathbf{i}
+    +\frac{\partial \rho}{\partial y}\mathbf{j}
+    +\frac{\partial \rho}{\partial z}\mathbf{k}
+$$
+标量场的梯度是一个向量，是这个标量函数下降最快的方向．
+记作$\grad \rho$．
+
+\subsection{旋度计算}
+对于矢量场 $\mathbf{V}=u \mathbf{i}+
+v \mathbf{j} +w \mathbf{k}$，它的旋度是
+\begin{equation*}
+    \nabla\times \mathbf{V}=
+    \begin{vmatrix}
+        \mathbf{i} & \mathbf{j}                   & \mathbf{k} \\
+        \frac{\partial}{\partial x}
+                   & \frac{\partial }{\partial y}
+                   & \frac{\partial }{\partial z}              \\
+        u          & v                            & w
+    \end{vmatrix}
+\end{equation*}
+记作$\rot\mathbf{V}$或者$\curl\mathbf{V}$．
+\begin{note}
+标量场梯度的旋度恒等于0．
+\end{note}
+
+  
+\subsection{散度}
+对于向量场$\mathbf{V}$，它的散度是
+\[
+  \nabla\cdot\mathbf{V}=
+  \frac{\partial u}{\partial x}+
+  \frac{\partial v }{\partial y}+
+  \frac{\partial w }{\partial z}
+\]
+记作$\dive\mathbf{V}$．
+\begin{notice}
+梯度计算是对于标量场，而散度，旋度均是对于
+向量场．梯度和旋度的计算结果是向量，而散度
+的计算结果是标量．
+\end{notice}
+
+\section{斯托克斯公式，散度定理，梯度定理}
+假设有一个封闭曲面$S$，$\mathbf{A}$是一个在
+封闭曲面$S$上有定义的矢量场．
+
+根据斯托克斯公式有(该公式中$S$是非封闭曲面，
+$C$是非封闭曲面$S$的边界曲线)
+\[
+  \oint_C \mathbf{A}\mathrm{d}\mathbf{r}=
+  \iint_S (\nabla\times \mathbf{A})\cdot \mathbf{n}
+  \mathrm{d}S
+\]
+也就是矢量场$\mathbf{A}$沿非封闭曲面$S$的边界曲线$C$
+的积分等于$\mathbf{A}$的旋度在非封闭曲面上的积分．
+
+根据散度定理有
+\[
+  \oiint_S \mathbf{A}\cdot \mathbf{n}\mathrm{d}S=
+  \oiiint_v(\nabla \cdot \mathbf{A})\mathrm{d}v 
+\]
+也就是矢量场$\mathbf{A}$在封闭曲面上面的积分等于
+这个矢量场在由这个封闭曲面包裹的闭空间中对体积的积分．
+
+对于一个标量场$P$，由梯度定理有
+\[
+  \oiint_S P \mathbf{n}\mathrm{d}S=
+  \oiiint_v\nabla P \mathrm{d} v 
+\]
+
+\begin{example}
+有一个矢量场$\mathbf{V}=(x^2+y^2)\mathbf{i}+
+(x^2-y^2)\mathbf{j}$
+求$\mathbf{V}$的旋度，散度，散度的梯度．
+
+\begin{equation*}
+  \begin{split}
+    \curl\mathbf{V}&= \left(\frac{\partial}{\partial x} (x^2+y^2)-
+    \frac{\partial }{\partial y}(x^2-y^2)\right)\mathbf{k} \\ 
+                   &=(2x+2y)\mathbf{k}\\
+    \dive\mathbf{V}&=\frac{\partial }{\partial x}(x^2+y^2)+
+    \frac{\partial }{\partial y}(x^2-y^2) \\ 
+    &=2x-2y\\
+\grad (\dive \mathbf{V})&=\frac{\partial}{\partial x}(2x-2y)\mathbf{i}+\frac{\partial}{\partial y}(2x-2y)
+\mathbf{j}\\
+&=2\mathbf{i}-2\mathbf{j}
+\end{split}
+\end{equation*}
+\end{example}
+
+\begin{notice}
+  标量场和矢量场的差别在于，标量场是没有方向的，
+  是一个数量场，也就是$\rho=\rho(x,y,z)$，是关于
+  $x $,$y $,$z$的函数．矢量场是由向量组成的，是
+  有方向的，也就是$\mathbf{V}=u(x,y,z)\mathbf{i}+
+  v(x,y,z)\mathbf{j}+w(x,y,z)\mathbf{k}$，
+  每个分量都是位置的函数．
+\end{notice}
+
+\section{并矢}
+将两个矢量写在一起称为并矢，如$\mathbf{VV}$．
+给定矢量$\mathbf{\alpha}=(\alpha_1,\alpha_2,
+\alpha_3)$，$\mathbf{\beta}=(\beta_1,\beta_2,
+\beta_3)$．并矢的计算的定义是
+\[
+  \mathbf{\alpha}\mathbf{\beta}=
+  \begin{bmatrix}
+      \alpha_1	\\
+       \alpha_2	\\
+      \alpha_3	\\
+  \end{bmatrix}
+  \begin{bmatrix}
+      \beta_1	& \beta_2	& \beta_3	\\
+  \end{bmatrix}
+  =\begin{bmatrix}
+       \alpha_1\beta_1	& \alpha_1\beta_2	& \alpha_1\beta_3\\
+       \alpha_2\beta_1	& \alpha_2\beta_2	& \alpha_2\beta_3	\\
+       \alpha_3\beta_1	& \alpha_3\beta_2	& \alpha_3\beta_3	\\
+   \end{bmatrix}
+\]
+对于速度场的并矢$\mathbf{V}=(u,v,w)$，其中$u$,$v$,$w$
+都是关于$x$,$y$,$z$的函数，如果非定常，还是关于时间
+$t$的函数．
+\[
+  \mathbf{VV}=\begin{bmatrix}
+                  u^2	& uv	& uw	\\
+                  vu	& v^2	& vw	\\
+                  wu	& wv	& w^2	\\
+              \end{bmatrix}
+\]
+速度场并矢的散度计算如下，
+\begin{equation*}
+  \begin{split}
+    \nabla \cdot (\mathbf{VV})&=
+  \begin{bmatrix}
+      \frac{\partial }{\partial x}	& 
+      \frac{\partial }{\partial y}  &
+      \frac{\partial }{\partial z}    \\
+  \end{bmatrix}
+  \begin{bmatrix}
+      u^2	& uv	& uw	\\
+      vu	& v^2	& vw	\\
+      wu	& vw	& w^2	\\
+  \end{bmatrix}\\ 
+                              &=
+   \begin{bmatrix}
+      \frac{\partial }{\partial x }(u^2+uv+uw)&
+      \frac{\partial}{\partial y }(uv+v^2+vw)&
+      \frac{\partial}{\partial z }(uw+vw+w^2)\\
+   \end{bmatrix}
+\end{split}
+\end{equation*}
+并矢的散度是一个向量．
+\begin{note}
+  并矢已经不是向量场，而是一个张量，是一个二阶张量
+  函数．
+\end{note}
+
+\section{物质导数}
+流体的状态参数是位置和时间的函数，对于速度
+$\mathbf{V}=\mathbf{V}(x,y,z,t)$，加速度就是
+速度$\mathbf{V}$对于时间的导数，但是流体的
+位置也是关于时间的函数，因此引入物质导数
+$\frac{\mathrm{D}}{\mathrm{D}t }$．
+
+定义物质导数的计算
+\[
+  \frac{\mathrm{D}}{\mathrm{D}t }=u \frac{\partial }
+  {\partial x}+v \frac{\partial }{\partial y }+
+  w \frac{\partial }{\partial z}+
+  \frac{\partial }{\partial t }
+\]
+用梯度算子可以写成
+\[
+  \frac{\mathrm{D}}{\mathrm{D}t }=
+  \frac{\partial }{\partial t }+
+  \mathbf{V} \cdot \nabla 
+\]
+物质导数的物理意思是运动流体质点的某个量
+随时间的变化率．$\frac{\partial }{\partial t }$是
+当地导数，物理含义是确定空间点上的某个量随时间的
+变化率．$\mathbf{V}\cdot\nabla$是牵连导数，物理
+含义是具有空间不均匀流场中，由于质点的位置变化而
+导致某个量随时间的变化．
+
+速度的物质导数就是加速度．
+
+\subsection{速度散度的物理意义}
+速度散度也可以表示为
+\[
+  \nabla \cdot \mathbf{V}=\frac{1}{\delta v }
+  \frac{\mathrm{D}(\delta v )}{\mathrm{D}t }
+\]
+其物理意义是，标定流体微团在运动过程中体积对时间
+的变化率就是速度的散度．
+
+
+
