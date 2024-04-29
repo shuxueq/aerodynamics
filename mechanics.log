@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.3.23)  29 APR 2024 21:03
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.3.23)  29 APR 2024 21:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**elegant.tex
-(./elegant.tex
+**mechanics.tex
+(./mechanics.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
 (./elegantbook.cls
@@ -1711,7 +1711,7 @@ Package csquotes Info: ... none found.
 LaTeX Font Info:    Overwriting symbol font `CJKmath' in version `bold'
 (Font)                  TU/SourceHanserifSC-Regular.otf(0)/m/n --> TU/SourceHan
 serifSC-Regular.otf(0)/b/n on input line 59.
- (./elegant.aux
+ (./mechanics.aux
 (./aerodynamics/introductory_thoughts.aux)
 (./aerodynamics/Field_theory_review.aux)
 (./aerodynamics/fundamental_equations.aux)
@@ -1721,7 +1721,7 @@ serifSC-Regular.otf(0)/b/n on input line 59.
 (./aerodynamics/Incompressible_Flow_Airfoil_2.aux)
 (./aerodynamics/finite_wing.aux) (./appendix/integral.aux)
 (./appendix/kelvin.aux))
-\openout1 = `elegant.aux'.
+\openout1 = `mechanics.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
 LaTeX Font Info:    ... okay on input line 59.
@@ -1744,9 +1744,9 @@ LaTeX Font Info:    ... okay on input line 59.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 59.
 LaTeX Font Info:    ... okay on input line 59.
 Package hyperref Info: Link coloring ON on input line 59.
- (./elegant.out) (./elegant.out)
+ (./mechanics.out) (./mechanics.out)
 \@outlinefile=\write8
-\openout8 = `elegant.out'.
+\openout8 = `mechanics.out'.
 
 
 *geometry* driver: auto-detecting
@@ -1839,18 +1839,18 @@ Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout5 = `elegant.bcf'.
+\openout5 = `mechanics.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'elegant.bbl' not found.
+Package biblatex Info: ... file 'mechanics.bbl' found.
 
-No file elegant.bbl.
+(./mechanics.bbl)
 Package biblatex Info: Reference section=0 on input line 59.
 Package biblatex Info: Reference segment=0 on input line 59.
 \c@lstlisting=\count580
 Configuring pdfsync
 \PDFSYNC@ut=\write9
-\openout9 = `elegant.pdfsync'.
+\openout9 = `mechanics.pdfsync'.
 
 \PDFSYNCf@li@=\count581
 \PDFSYNC@rder=\count582
@@ -1914,7 +1914,7 @@ LaTeX Font Info:    Font shape `TU/XITSMath(3)/m/n' will be
 (Font)              scaled to size 7.22623pt on input line 61.
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 61
 .
-(c:/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
+ (c:/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+msa on input line 61.
@@ -1941,7 +1941,7 @@ File: ./figure/logo-blue.png Graphic file (type bmp)
 
 
 
-] (./elegant.toc
+] (./mechanics.toc
 LaTeX Font Info:    Font shape `TU/XITSMath(2)/m/n' will be
 (Font)              scaled to size 15.05785pt on input line 1.
 LaTeX Font Info:    Font shape `TU/XITSMath(2)/m/n' will be
@@ -1956,7 +1956,7 @@ LaTeX Font Info:    Font shape `TU/XITSMath(3)/m/n' will be
 
 ] [2])
 \tf@toc=\write10
-\openout10 = `elegant.toc'.
+\openout10 = `mechanics.toc'.
 
  [3] [1
 
@@ -2119,7 +2119,7 @@ nput line 35.
 
 
 
-] [78] (./elegant.aux (./aerodynamics/introductory_thoughts.aux)
+] [78] (./mechanics.aux (./aerodynamics/introductory_thoughts.aux)
 (./aerodynamics/Field_theory_review.aux)
 (./aerodynamics/fundamental_equations.aux)
 (./aerodynamics/incompressible_inviscous_flow.aux)
@@ -2136,19 +2136,19 @@ L3 programming layer <2022/08/05>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `elegant.out' has not changed.
+Package rerunfilecheck Info: File `mechanics.out' has not changed.
 (rerunfilecheck)             Checksum: 57DE4E31F8BA80A1B3EF6291B0ADB43A;10408.
-Package logreq Info: Writing requests to 'elegant.run.xml'.
-\openout1 = `elegant.run.xml'.
+Package logreq Info: Writing requests to 'mechanics.run.xml'.
+\openout1 = `mechanics.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55310 strings out of 474761
- 1178717 string characters out of 5761074
- 2292526 words of memory out of 5000000
- 76384 multiletter control sequences out of 15000+600000
+ 55313 strings out of 474761
+ 1178825 string characters out of 5761074
+ 2292561 words of memory out of 5000000
+ 76385 multiletter control sequences out of 15000+600000
  577399 words of font info for 241 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 103i,50n,130p,680b,1746s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,50n,130p,682b,1746s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on elegant.pdf (82 pages).
+Output written on mechanics.xdv (82 pages, 1342572 bytes).
