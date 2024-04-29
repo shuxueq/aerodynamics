@@ -1,4 +1,4 @@
-% ! TEX root = ../mechanics.tex
+% ! TEX root = ../mechanics.tex 
 
 \chapter{低速翼型的气动特性}
 \section{翼形的几何尺寸}
@@ -48,13 +48,27 @@ $x$轴，垂直弦线向上建立$y$轴，这样的坐标系称为{\bfseries 体
 中弧线的起点和终点分别是前缘点和后缘点。
 {\bfseries 厚度(thickness)}是翼型上下表面的距离，
 这个距离垂直于弦长。翼型在前缘点附近的形状通常是一段
-圆弧，这个圆弧的半径近似是$0.02c$。机翼的气动力和气动
+圆弧，这个圆弧的半径近似是$0.02c$。翼型的气动力和气动
 力矩在{\color{titleblue}\ref{气动力和气动力矩}}节已经
 讨论，请往回看。
 
 这里讨论对于机翼的属性都是对于无限长的翼型来说的，即
 在翼展方向翼型的截面形状不变。
-
+\subsection{NACA翼型的命名规则}
+四位数字的命名含义见下图\ref{fig:four_digtal}.
+\begin{figure}[!ht]
+    \centering
+    \input{./aerodynamics/four_digtal.tex}
+    \caption{四位数命名含义}
+    \label{fig:four_digtal}
+\end{figure}
+五位数字的命名含义见下图\ref{fig:five_digtal}
+\begin{figure}[!ht]
+    \centering
+    \input{./aerodynamics/five_digtal.tex}
+    \caption{五位数命名含义}
+    \label{fig:five_digtal}
+\end{figure}
 \begin{figure}[!ht]
 	\centering
 	\input{./aerodynamics/angle_of_attack.tex}
@@ -73,7 +87,7 @@ $x$轴，垂直弦线向上建立$y$轴，这样的坐标系称为{\bfseries 体
 	\label{fig:separate}
 \end{figure}
 然而，当攻角逐渐变大到一定值时，气流有从翼型上表面分离的趋势，在
-机翼后面产生一片“死区空气”(dead air),如图\ref{fig:separate}右图所示。
+翼型后面产生一片“死区空气”(dead air),如图\ref{fig:separate}右图所示。
 在气流分离的区域，流动时再循环的。并且有部分流动是与自由来流的方向相
 反的，这就是{\bfseries 逆流(reversed flow)}。流动分离主要是因为流体的
 粘性效应。
@@ -166,8 +180,14 @@ $x$轴，垂直弦线向上建立$y$轴，这样的坐标系称为{\bfseries 体
 {\color{noteorange}升阻比越大，翼型的效率就越高}。
 由于飞机其他部分的阻力，实际飞机的升阻比一般在10到
 20这样的量级。
+\begin{example}
+一架低速飞行的平直机翼采用 NACA
+2415翼型,问此翼型的$\overline{f}$,
+$\overline{x}_{f}$和$\overline{c}$各等于多少?
+    
+\end{example}
 
-\section{用于低速流动下的机翼的理论解法：面涡}
+\section{用于低速流动下的翼型的理论解法：面涡}
 想象一根直线垂直于纸面，通过一个点$O$，并且向
 纸面的里面和外面无限延伸。这条直线就是强度为
 $\Gamma$的{\bfseries 涡旋线(vortex filament)}。
@@ -260,7 +280,7 @@ $a$点到$b$点上式的总和。不同面涡部分在$P$点产生的
 \[
   \gamma =u_1-u_2
 \]
-这个等式非常重要。它表明了{\bfseries 当地面涡切向速度跳跃的差值
+这个等式非常重要。它表明了{\bfseries \color{noteorange}当地面涡切向速度跳跃的差值
 就等于当地面涡的强度}。
 
 面涡的概念是在低速翼型性质分析中的一个工具。考虑在自由来流的速度
