@@ -228,7 +228,8 @@
     \newcommand*{\kaishu}{\CJKfamily{zhkai}}
     \xeCJKsetup{
     CJKmath=true,
-    CJKspace=false,}
+    CJKspace=false,
+    }
     \newcommand*{\fangsong}{\CJKfamily{zhfs}}}{\relax}
   
   \AfterEndPreamble{
@@ -392,6 +393,8 @@
 \RequirePackage{enumerate}
 % list/itemize/enumerate setting
 \RequirePackage[shortlabels,inline]{enumitem}
+%\setlist[enumerate]{label=\bfseries\color{titleblue}{\arabic* .}}
+%\setlist[enumerate,2]{label=\bfseries{\color{titleblue}{\alph*)}}
 \setlist{nolistsep}
 
 \RequirePackage[labelfont={bf,color=structurecolor}]{caption} 
