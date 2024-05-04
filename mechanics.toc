@@ -63,10 +63,12 @@
 \contentsline {section}{\numberline {6.8}失速的再介绍}{65}{section.6.8}%
 \contentsline {section}{\numberline {6.9}总结}{67}{section.6.9}%
 \contentsline {chapter}{\numberline {第七章}不可压无粘流绕流有限翼展的机翼}{69}{chapter.7}%
-\contentsline {part}{第三部分\hspace {1em}附录}{70}{part.3}%
-\contentsline {chapter}{\numberline {A}积分}{71}{appendix.A}%
-\contentsline {section}{\numberline {A.1}第一个积分}{71}{section.A.1}%
-\contentsline {section}{\numberline {A.2}第二个积分}{71}{section.A.2}%
-\contentsline {section}{\numberline {A.3}第三个积分}{75}{section.A.3}%
+\contentsline {section}{\numberline {7.1}下洗和诱导阻力}{69}{section.7.1}%
+\contentsline {section}{\numberline {7.2}面涡，毕奥--萨伐尔定律和亥姆霍兹定理}{71}{section.7.2}%
+\contentsline {part}{第三部分\hspace {1em}附录}{72}{part.3}%
+\contentsline {chapter}{\numberline {A}积分}{73}{appendix.A}%
+\contentsline {section}{\numberline {A.1}第一个积分}{73}{section.A.1}%
+\contentsline {section}{\numberline {A.2}第二个积分}{73}{section.A.2}%
+\contentsline {section}{\numberline {A.3}第三个积分}{77}{section.A.3}%
 \renewcommand {\cftchappresnum }{附录 }\renewcommand {\cftchapaftersnum }{}
-\contentsline {chapter}{\numberline {B}开尔文环量定理证明}{77}{appendix.B}%
+\contentsline {chapter}{\numberline {B}开尔文环量定理证明}{79}{appendix.B}%

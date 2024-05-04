@@ -1254,7 +1254,7 @@
 \newenvironment{note}{
   \par\noindent\makebox[-3pt][r]{
     \scriptsize\color{red!90}\textdbend\quad}
-    \textbf{\color{second}\notename} \citshape}{\par}
+    \textbf{\color{second}\notename} \citshape \bfseries }{\par}
 
 \newenvironment{proof}{
   \par\noindent\textbf{\color{second}\proofname\;}
