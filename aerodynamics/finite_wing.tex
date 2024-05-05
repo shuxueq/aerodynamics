@@ -138,3 +138,294 @@ $\alpha$，如图\ref{fig:effective_attack}
     束或者形成一个闭合的路径
 \end{enumerate}
 
+下面介绍{\bfseries 升力分布(lift distribution)}的
+概念。在给定位置$y_1$升力大小是$L'\left(y_1\right) $，
+这个位置处的弦长和迎角分别是$c$和$\alpha$。现在
+在另外一个位置$y_2$处的弦长和迎角可能会发生变化，
+在这个位置的升力是$L'\left(y_2\right) $ 
+\begin{notice}
+大部分机翼的翼型的弦长都会随着位置发生变化，矩形
+机翼除外；并且每个截面翼型的几何攻角也可能不同，
+这是因为机翼有可能发生扭转了。如果翼根处的翼型的
+几何攻击大于翼尖的几何攻击，叫做washout ，反之叫
+做washin。这种情况叫做{\bfseries 几何扭转(geometrical twist)}。
+另外，现代的机翼，不同截面的翼型也不同，所以
+每个截面的零升迎角也不同，这叫做{\bfseries 气动扭转(aerodynamic twist)}。
+\end{notice}
+在不同位置处，单位翼展上的升力是不同的，这就是
+机翼上沿着翼展方向上的单位翼展上的升力分布，即$L'=L'(y)$。
+根据茹科夫斯基定理，我们知道
+\[
+  L'=L'(y)=\rho_\infty V_\infty \Gamma(y)
+\]
+在翼尖处，由于上下表面的压强平衡，所以在翼尖位置，即$y=-\frac{b}{2 }$和
+$y= \frac{b}{2}$处的升力等于0 。
+
+总的来说，本章的问题就是计算诱导阻力，总升力，
+有限翼展机翼的升力分布。
+
+\section{普朗特经典升力线理论}
+普朗特认为，一个强度为$\Gamma$的面涡将被以
+某种方式固定在流场中的某个固定位置，这个叫
+做
+{\bfseries 附着涡(bound vortex)}
+，并且产生一个升力
+$L'=\rho_\infty V_\infty \Gamma$
+。与附着涡相反的是
+{\bfseries 自由涡(free vortex)}
+，它会随着同一个流体微团运动而遍及全流场。
+用一个从
+$y=-\frac{b}{2 }$
+到
+$y=\frac{b}{2 }$
+的附着涡替换掉机翼。根据亥姆霍兹定理，涡线
+不能再流场中结束，因此假设在翼尖的下游有两
+条向无限远方向延伸的自由涡。因为附着涡和自
+由涡叠加而形成的涡系形状上像一个马蹄，因此
+叫做
+{\bfseries 马蹄涡(horseshoe vortex)}。
+附着涡不会在翼展这段位置上诱导出下洗的速度
+，因此，下洗速度$w $都是由自由涡诱导出来的
+。我们可以用毕奥萨伐尔定律计算出翼展上的诱
+导速度
+\[
+  w(y)=-\frac{\Gamma}{4\pi(\frac{b}{2}+y)}
+       -\frac{\Gamma}{4\pi(\frac{b}{2}-y)}
+       =-\frac{\Gamma}{4\pi}\frac{b}{\left
+     (\frac{b}{2}\right)^2-y^2}
+\]
+
+单个马蹄涡产生的下洗速度分布和实际情况并不
+一致，并且在翼尖处诱导速度将接近无穷大，这
+显然不合理。假设在翼展上分布由大量的马蹄涡
+形成一个马蹄涡系，每个马蹄涡的附着涡长度都
+不一样，并且强度也不一样，但是每条附着涡都
+还是沿着一条直线分布的，这条线叫做
+{\bfseries 升力线(lifting line)}。
+这一部分请参考教材。
+请记住尾涡的强度等于升力线上面涡强度的变化
+。
+
+如果叠加无穷多的马蹄涡，形成一个马蹄涡系，
+这样沿翼展方向，面涡强度
+$\Gamma$
+就变成了一个连续分布的函数，也就是
+$\Gamma=\Gamma(y)$
+在微元长度上的面涡强度就是
+\[
+  \mathrm{d}\Gamma=\left(\frac{\mathrm{d}
+  \Gamma}{\mathrm{d}y}\right)
+  \mathrm{d}y
+\]
+相应地，尾涡的强度就等于
+$\mathrm{d}\Gamma$
+的变化。那么任意一点$y $处的涡强
+$\mathrm{d}\Gamma$
+在$y_0$ 处的诱导速度就是
+\[
+  \mathrm{d}w=-\frac{(\mathrm{d}\Gamma 
+  / \mathrm{d}y)\mathrm{d}y}{4\pi(y_0-y)}
+\]
+这个速度是在$y $处的半无限长的自由涡在点
+$y_0 $诱导出的下洗速度。这个负号表示速度方
+向是向下的。在$y_0 $点的总诱导速度由下式给
+出
+\[
+  w=-\frac{1}{4\pi}
+  \int_{-\frac{b}{2}}^{\frac{b}{2 }}
+  \frac{\left(\frac{\mathrm{d}\Gamma}{\mathrm{d}y}\right)}
+  {y_0-y}\mathrm{d}y
+\]
+上式很重要，它给出了在$y_0 $处由所有自由涡
+诱导出来的下洗速度。
+
+从图\ref{fig:effective_attack}中，我们得到
+诱导迎角的大小
+\[
+  \alpha_i(y_0)=\tan ^{-1}
+  \left(\frac{-w(y_0) }{V_\infty}\right)
+\]
+一般来说，$w $远小于$V_\infty$，所以诱导迎
+角也可以写成
+\[
+  \alpha_i(y_0)= -\frac{w(y_0) }{V_\infty}
+\]
+再将前面计算下洗速度的积分公式代入就可以得
+到
+\begin{empheq}[box=\widefbox]{equation*}
+  \alpha_i(y_0)=\frac{1}{4\pi V_\infty}
+  \int_{-\frac{b}{2 }}^{\frac{b}{2 }}
+  \frac{\left(\frac{\mathrm{d}\Gamma}{\mathrm{d}y}\right) }
+  {y_0-y}\mathrm{d}y
+\end{empheq}
+这样我们就可以通过涡强分布来计算诱导迎角的
+大小。
+
+根据前面所述的几何迎角和有效迎角之间的关系
+，我们可以计算处有效迎角
+\[
+  \alpha_{eff}= \alpha-\alpha_i
+  =\alpha-\frac{1}{4\pi V_\infty}
+  \int_{-\frac{b}{2 }}^{\frac{b}{2 }}
+  \frac{\left(\frac{\mathrm{d}\Gamma}{\mathrm{d}y}\right) }
+  {y_0-y}\mathrm{d}y
+\]
+然后根据前面我们讨论的翼型的升力曲线，我们
+就可以得到在$y_0 $处的升力系数
+\[
+  c_l=a_0\left(\alpha_{eff}(y_0)-\alpha_{L=0}\right)
+  =2\pi\left(\alpha_{eff}(y_0)-\alpha_{L=0}\right)
+\]
+在任何情况下，零升迎角都是已知的，它只与翼
+型有关。同样，升力不仅可以通过升力系数进行
+计算，还可以用茹科夫斯基升力公式进行计算，
+也就是
+\[
+  L'=\frac{1}{2}\rho_\infty V_\infty ^2 
+  c(y_0)c_l
+  = \rho_\infty V_\infty \Gamma\left(y_0\right) 
+\]
+于是我们又可以得到计算机翼单位翼展上升力系
+数的第二个公式，即
+\[
+  c_l=\frac{2 \Gamma\left(y_0\right) }{V_\infty c(y_0) }
+\]
+所以有效攻角也可以用下式计算
+\[
+  \alpha_{eff}=\frac{\Gamma\left(y_0\right) }
+  {\pi V_\infty c\left(y_0\right) }+\alpha_{L=0}
+\]
+带入到
+\[
+  \alpha=\alpha_{eff}+\alpha_i
+\]
+中，我们就得到了几何攻角的计算公式，即
+\begin{empheq}[box=\widefbox]{equation*}
+  \alpha(y_0)= 
+  \frac{\Gamma(y_0) }{\pi V_\infty c(y_0) }+
+  \alpha_{L=0}(y_0)+
+  \frac{1}{4\pi V_\infty}
+  \int _{-\frac{b}{2}}^{\frac{b}{2 }}
+  \frac{\frac{\mathrm{d}\Gamma }{\mathrm{d}y}}
+  {y_0-y}\mathrm{d}y
+\end{empheq}
+这就是普朗特升力线理论的基本方程。这表明了几何
+迎角等于有效迎角加上诱导迎角。这个方程是一个积
+分---微分方程，唯一的未知量就是$\Gamma $，其他
+量都是已知的。
+
+从基本方程得出$\Gamma=\Gamma(y_0)$的解给了我们
+三个关于有限翼展机翼的基本性质，即：
+\begin{enumerate}
+  \item 升力分布可以从库塔--- 茹科夫斯基定理中
+    得到，即
+    \[
+      L'(y_0)=\rho_\infty V_\infty \Gamma(y_0) 
+    \]
+  \item 总升力可以对第一点性质中的公式积分得到
+    ，即
+    \[
+      L=\int_{-\frac{b}{2 }}^{\frac{b}{2}}L'(y)\mathrm{d}y
+    \]
+    或
+    \[
+      L=\rho_\infty V_\infty 
+      \int_{-\frac{b}{2 }}^{\frac{b}{2}}\Gamma(y)\mathrm{d}y
+    \]
+    升力系数可以由下式给出
+    \[
+      C_L=\frac{L}{q_\infty S}=\frac{2}{V_\infty S}= 
+      \int _{-\frac{b}{2}}^{\frac{b}{2}}\Gamma(y)\mathrm{d}y
+    \]
+  \item 从图\ref{fig:span}中，我们可以得到诱导
+    阻力的计算公式，即
+    \[
+      D' _i=L' _i\sin \alpha_i
+    \]
+    因为诱导迎角很小，所以
+    \[
+      D' _i=L' _i\alpha_i
+    \] 
+    于是总的诱导阻力由下面的积分公式给出
+    \[
+      D_i=\int _{-\frac{b}{2}}
+      ^{\frac{b}{2}}L'(y)\alpha_i(y)
+      \mathrm{d}y 
+    \]
+    或
+    \[
+      D_i= \rho_\infty V_\infty 
+      \int _{-\frac{b}{2}}
+      ^{\frac{b}{2}}
+      \Gamma(y)\alpha_i(y)\mathrm{d}y
+    \]
+
+    相应地，诱导阻力系数就是
+    \[
+      C_{D,i}=\frac{D_i}{q_\infty S}
+      =\frac{2}{V_\infty S}
+      \int _{-\frac{b}{2}}
+      ^{\frac{b}{2}}
+      \Gamma(y)\alpha_i(y)\mathrm{d}y
+    \]
+\end{enumerate}
+
+\subsection{椭圆型升力分布}
+考虑一个涡强分布，即
+\[
+  \Gamma(y)=\Gamma_0
+  \sqrt{1-\left(\frac{2y}{b}\right)^2} 
+\]
+请记住：
+\begin{enumerate}
+  \item $\Gamma_0$是涡强的初始值，是在
+    翼展中间的值
+  \item 环量随着坐标$y $椭圆型地变化，
+    单位翼展上的升力由下式给出
+    \[
+      L'(y)=\rho_\infty V_\infty 
+      \Gamma_0
+      \sqrt{1-\left(\frac{2y}{b }\right)^2} 
+    \] 
+    \item $\Gamma\left(-\frac{b}{2}\right)= 
+      \Gamma\left(\frac{b}{2}\right) $，环量
+      和升力在翼尖出等于0 。
+\end{enumerate}
+
+首先，我们先计算下洗，
+\[
+  \frac{\mathrm{d}\Gamma}{\mathrm{d}y}
+  =-\frac{4\Gamma_0}{b^2}
+  \frac{y}{\left(1-\frac{4y^2}{b^2}\right)^{\frac{1}{2}}}
+\]
+带入到下式中
+\[
+  w(y_0)=-\frac{1}{4\pi}
+  \int _{-\frac{b}{2}}^{\frac{b}{2}}
+  \frac{\mathrm{d}\Gamma / \mathrm{d}y}{y_0-y}\mathrm{d}y
+\]
+得到
+\[
+  w(y_0)=\frac{\Gamma_0}{\pi b^2}
+  \int _{-\frac{b}{2}}^{\frac{b}{2}}
+  \frac{y}{\left(1-\frac{4y^2}{b^2}\right)^{\frac{1}{2}}(y_0-y)}\mathrm{d}y
+\]
+作变量替换
+\[
+  y=\frac{b}{2}\cos \theta \qquad \mathrm{d}y=-\frac{b}{2}\sin \theta \mathrm{d}\theta
+\]
+上述积分就变成了
+\[
+  w(\theta_0)=-\frac{\Gamma_0}{2 \pi b }
+  \int _0 ^\pi \frac{\cos \theta}{\cos \theta-\cos \theta_0}\mathrm{d} \theta
+\]
+计算得到
+\[
+  w(\theta_0)=-\frac{\Gamma_0}{2b}
+\]
+这结果表明，{\color{noteorange}\bfseries 对于椭圆型升力分布的机翼来说，
+下洗速度是一个常数}。这个结论很有趣也很重要。
+我们可以计算得到诱导迎角
+\[
+  \alpha_i=-\frac{w }{V_\infty }= \frac{\Gamma_0}{2 b V_\infty}
+\]
