@@ -66,10 +66,13 @@
 \contentsline {section}{\numberline {7.1}下洗和诱导阻力}{76}{section.7.1}%
 \contentsline {section}{\numberline {7.2}面涡，毕奥--萨伐尔定律和亥姆霍兹定理}{79}{section.7.2}%
 \contentsline {section}{\numberline {7.3}普朗特经典升力线理论}{80}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}椭圆型升力分布}{82}{subsection.7.3.1}%
-\contentsline {part}{第三部分\hspace {1em}附录}{84}{part.3}%
-\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}积分}{85}{appendix.A}%
-\contentsline {section}{\numberline {A.1}第一个积分}{85}{section.A.1}%
-\contentsline {section}{\numberline {A.2}第二个积分}{85}{section.A.2}%
-\contentsline {section}{\numberline {A.3}第三个积分}{89}{section.A.3}%
-\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}开尔文环量定理证明}{91}{appendix.B}%
+\contentsline {subsection}{\numberline {7.3.1}椭圆型升力分布}{83}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}一般升力分布}{85}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}展弦比的影响}{87}{subsection.7.3.3}%
+\contentsline {section}{\numberline {7.4}总结}{87}{section.7.4}%
+\contentsline {part}{第三部分\hspace {1em}附录}{89}{part.3}%
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}积分}{90}{appendix.A}%
+\contentsline {section}{\numberline {A.1}第一个积分}{90}{section.A.1}%
+\contentsline {section}{\numberline {A.2}第二个积分}{90}{section.A.2}%
+\contentsline {section}{\numberline {A.3}第三个积分}{94}{section.A.3}%
+\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}开尔文环量定理证明}{96}{appendix.B}%

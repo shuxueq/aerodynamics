@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.3.23)  5 MAY 2024 21:58
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.3.23)  6 MAY 2024 21:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2186,7 +2186,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.04004pt}.
 
-[82])
+[82]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.04004pt, for example:
@@ -2195,7 +2195,52 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.04004pt}.
 
-[83] [84
+[83]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.04004pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.04004pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.04004pt}.
+
+[84]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.04004pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.04004pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.04004pt}.
+
+[85]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.04004pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.04004pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.04004pt}.
+
+[86] (./aerodynamics/finite_wing_summary.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.02003pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.02003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.02003pt}.
+
+[87]))
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 12.02003pt, for example:
+(fancyhdr)                \setlength{\headheight}{12.02003pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-0.02003pt}.
+
+[88] [89
 
 
 
@@ -2204,7 +2249,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
  (./appendix/integral.tex
 附录 A
-[85
+[90
 
 
 ]
@@ -2216,7 +2261,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.04004pt}.
 
-[86]
+[91]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.04004pt, for example:
@@ -2225,7 +2270,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.04004pt}.
 
-[87]
+[92]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.04004pt, for example:
@@ -2234,7 +2279,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.04004pt}.
 
-[88]
+[93]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.04004pt, for example:
@@ -2243,7 +2288,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.04004pt}.
 
-[89])
+[94])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 12.04004pt, for example:
@@ -2252,17 +2297,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-0.04004pt}.
 
-[90]
+[95]
 \openout2 = `./appendix/kelvin.aux'.
 
  (./appendix/kelvin.tex
 附录 B
-[91
+[96
 
 
 
 
-]) [92] (./mechanics.aux (./titlepage/titlepage.aux)
+]) [97] (./mechanics.aux (./titlepage/titlepage.aux)
 (./aerodynamics/introductory_thoughts.aux)
 (./aerodynamics/Field_theory_review.aux)
 (./aerodynamics/fundamental_equations.aux)
@@ -2281,15 +2326,15 @@ L3 programming layer <2022/07/14>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `mechanics.out' has not changed.
-(rerunfilecheck)             Checksum: D67684F82CA928A36599B7A8D481C6A6;5548.
+(rerunfilecheck)             Checksum: 6A6AD2A0C94F10D14266BBC9C428E349;5619.
  ) 
 Here is how much of TeX's memory you used:
- 41050 strings out of 474761
- 910806 string characters out of 5761074
- 1995148 words of memory out of 5000000
- 62396 multiletter control sequences out of 15000+600000
+ 41059 strings out of 474761
+ 911091 string characters out of 5761074
+ 1998148 words of memory out of 5000000
+ 62402 multiletter control sequences out of 15000+600000
  569907 words of font info for 193 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  107i,50n,117p,1229b,1731s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on mechanics.xdv (95 pages, 1398560 bytes).
+Output written on mechanics.pdf (100 pages).

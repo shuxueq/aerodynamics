@@ -1,0 +1,47 @@
+% ! TEX root = ./finite_wing.tex
+\section{总结}
+在总结之前，请确保你对一下概念都是熟悉的，
+请保证你对一下的内容式舒适的。
+\begin{summary}
+  \begin{enumerate}
+    \item 展弦比\hspace{2em}根稍比\hspace{2em}
+      诱导阻力\hspace{2em}下洗\hspace{2em}
+      诱导迎角\hspace{2em}有效迎角\hspace{2em}
+      几何迎角
+    \item 诱导迎角，几何迎角，有效迎角之间的关系
+      \[
+        \alpha_{\mathrm{eff}}=\alpha-\alpha_i
+      \]
+    \item 椭圆形机翼的计算公式
+      \begin{enumerate}
+        \item 下洗
+          \[
+            w=-\frac{\Gamma_0}{2b}
+          \]
+          \item 诱导迎角
+            \[
+              \alpha_i=\frac{C_L}{\pi \mathrm{AR}}
+            \]
+          \item 诱导阻力系数
+            \begin{empheq}[box=\bluebox]{equation*}
+              C_{D,i}=\frac{C_L^2 }{\pi \mathrm{AR}}
+            \end{empheq}
+          \item 升力线斜率
+            \begin{empheq}[box=\bluebox]{equation*}
+              a=\frac{a_0}{1+\frac{a_0}{\pi \mathrm{AR}}}
+            \end{empheq}
+      \end{enumerate}
+    \item 一般机翼
+      \begin{enumerate}
+        \item 诱导阻力系数
+          \begin{empheq}[box=\bluebox]{equation}
+            C_{D,i}=\frac{C_L^2}{\pi \mathrm{AR}}(1+\delta)= 
+            \frac{C_L^2}{\pi e \mathrm{AR}}
+          \end{empheq}
+        \item 升力线斜率
+          \begin{empheq}[box=\bluebox]{equation}
+            a=\frac{a_0}{1+(1+\tau)\frac{a_0}{\pi \mathrm{AR}}}
+          \end{empheq}
+      \end{enumerate}
+  \end{enumerate}
+\end{summary}

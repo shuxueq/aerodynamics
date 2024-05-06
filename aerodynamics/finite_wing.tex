@@ -63,10 +63,10 @@ $\alpha$，如图\ref{fig:effective_attack}
 \begin{enumerate}
   \item 实际的迎角是当地气流的方向和当地翼型弦线的夹角，这个夹角
     叫做{\bfseries 有效迎角(effective angle of attack)}，记作
-    $\alpha_{eff}$。因此，即使机翼有着几何攻角$\alpha$，当地翼型的
+    $\alpha_{\mathrm{eff}}$。因此，即使机翼有着几何攻角$\alpha$，当地翼型的
     迎角实际上更下一些，即有效迎角。
     \[
-      \alpha_{eff}=\alpha-\alpha_i
+      \alpha_{\mathrm{eff}}=\alpha-\alpha_i
     \]
   \item 当地的升力向量垂直于当地气流方向，因此相较于原来的升力向量
     （竖直方向）落后了角度$\alpha_i$。结果是在自由来流的方向会有
@@ -264,7 +264,7 @@ $y_0 $诱导出的下洗速度。这个负号表示速度方
 根据前面所述的几何迎角和有效迎角之间的关系
 ，我们可以计算处有效迎角
 \[
-  \alpha_{eff}= \alpha-\alpha_i
+  \alpha_{\mathrm{eff}}= \alpha-\alpha_i
   =\alpha-\frac{1}{4\pi V_\infty}
   \int_{-\frac{b}{2 }}^{\frac{b}{2 }}
   \frac{\left(\frac{\mathrm{d}\Gamma}{\mathrm{d}y}\right) }
@@ -273,8 +273,8 @@ $y_0 $诱导出的下洗速度。这个负号表示速度方
 然后根据前面我们讨论的翼型的升力曲线，我们
 就可以得到在$y_0 $处的升力系数
 \[
-  c_l=a_0\left(\alpha_{eff}(y_0)-\alpha_{L=0}\right)
-  =2\pi\left(\alpha_{eff}(y_0)-\alpha_{L=0}\right)
+  c_l=a_0\left(\alpha_{\mathrm{eff}}(y_0)-\alpha_{L=0}\right)
+  =2\pi\left(\alpha_{\mathrm{eff}}(y_0)-\alpha_{L=0}\right)
 \]
 在任何情况下，零升迎角都是已知的，它只与翼
 型有关。同样，升力不仅可以通过升力系数进行
@@ -292,12 +292,12 @@ $y_0 $诱导出的下洗速度。这个负号表示速度方
 \]
 所以有效攻角也可以用下式计算
 \[
-  \alpha_{eff}=\frac{\Gamma\left(y_0\right) }
+  \alpha_{\mathrm{eff}}=\frac{\Gamma\left(y_0\right) }
   {\pi V_\infty c\left(y_0\right) }+\alpha_{L=0}
 \]
 带入到
 \[
-  \alpha=\alpha_{eff}+\alpha_i
+  \alpha=\alpha_{\mathrm{eff}}+\alpha_i
 \]
 中，我们就得到了几何攻角的计算公式，即
 \begin{empheq}[box=\widefbox]{equation*}
@@ -370,6 +370,9 @@ $y_0 $诱导出的下洗速度。这个负号表示速度方
     \]
 \end{enumerate}
 
+在介绍椭圆形升力分布之前，先介绍一个重要的结论，即
+{\bfseries 椭圆形机翼的升力分布就是椭圆形升力分布，
+椭圆形升力分布的机翼就是椭圆形机翼}。
 \subsection{椭圆型升力分布}
 考虑一个涡强分布，即
 \[
@@ -429,3 +432,216 @@ $y_0 $诱导出的下洗速度。这个负号表示速度方
 \[
   \alpha_i=-\frac{w }{V_\infty }= \frac{\Gamma_0}{2 b V_\infty}
 \]
+对于椭圆型分布的机翼来说，诱导迎角也是一个常数。
+并且，当翼展趋于无穷大时，诱导迎角和下洗都趋于0 。
+这就是前面我们讨论的翼型理论。一个关于诱导迎角
+更有用的公式如下：
+\[
+  L=\rho_\infty V_\infty \Gamma_0 
+  \int _{-\frac{b}{2}}^{\frac{b}{2}}
+  \left(1-\frac{4y^2}{b^2}\right)^{\frac{1}{2}}
+  \mathrm{d}y
+\]
+再用前面所说的三角代换，计算这个积分得到
+\[
+  L=\rho_\infty V_\infty \Gamma_0 \frac{b}{4}\pi
+\]
+于是就得到了$\Gamma_0$的计算公式
+\[
+  \Gamma_0=\frac{4L}{\rho_\infty V_\infty b \pi}
+\]
+其中$L=\frac{1}{2}\rho_\infty V_\infty^2 S C_L$
+于是
+\[
+  \Gamma_0=\frac{2V_\infty S C_L}{b \pi}
+\]
+诱导迎角的计算公式就可以写成
+\[
+  \alpha_i = \frac{2V_\infty S C_L}{b \pi} 
+  \frac{1}{2b V_\infty }
+\]
+或者
+\[
+  \alpha _i =\frac{S C_L}{\pi b^2}
+\]
+机翼的一个重要几何参数就是{\bfseries 展弦比(aspect ratio)}，
+这里记作AR，即
+\[
+  \mathrm{AR}=\frac{b^2}{S}
+\]
+于是，上式就可以写成
+\[
+  \alpha_i=\frac{C_L}{\pi \mathrm{AR}}
+\]
+诱导阻力系数有下式给出，请记住诱导迎角是一个
+常数
+\[
+  C_{D,i}=\frac{2\alpha_i}{V_\infty S}
+  \int _{-\frac{b}{2}}^{\frac{b}{2}}
+  \Gamma(y)\mathrm{d}y
+  =\frac{2\alpha_i \Gamma_0}{V_\infty S}
+  \frac{b}{2}
+  \int _0^\pi \sin^2\theta \mathrm{d}  \theta
+  =\frac{\pi \alpha_i \Gamma_0 b }{2 V_\infty S}
+\]
+代入$\alpha_i=\frac{C_L}{\pi \mathrm{AR}}$得到
+\[
+  C_{D,i}=\frac{C_L^2}{\pi \mathrm{AR}}
+\]
+这是一个很重要的结果，它表明诱导阻力系数正比于
+升力系数的平方。前面我们已经知道，诱导阻力是翼
+尖涡出现的结果，而翼尖涡是由于翼尖处上下表面压
+强差的结果。升力也同样是由于上下表面的压强差产
+生的。因此，诱导阻力与有限翼展机翼上的升力产生
+密切相关。事实上，诱导阻力经常被叫做
+{\bfseries 升致阻力(drag due to lift)}。
+显然，任何一架飞机不能免费地产生升力，诱导阻力
+就是产生升力的代价。飞机克服诱导阻力所需的功率
+就是产生升力所需的功率。诱导阻力系数随升力系数
+增大而迅速增大，当升力系数比较大的时候，诱导阻
+力系数就变成总阻力系数的一个重要组成部分了。
+\begin{notice}
+比如飞机起飞和着陆时，因为飞机的速度比较小，而
+需要比较大的升力，这个时候就需要我们在上一章中
+提到的增升装置，当增升装置启用的时候，飞行阻力
+也会相应变大很多。
+\end{notice}
+甚至在一个很高的巡航速度飞行的时候，诱导阻力系
+数都占到总阻力系数的25\%。
+
+另外一个重要的结论是
+{\color{noteorange} \bfseries 诱导阻力系数反比
+于展弦比 }。因此，为了减小阻力，我们希望机翼有
+一个尽可能最大的展弦比。但是，展弦比很大，机翼
+的结构强度就会相应减小，或者说机翼更难设计。对
+于一般的飞行器来说，展弦比是气动设计和结构设计
+中的一个两难的选择。
+
+椭圆型升力分布的机翼的一些其他性质如下。考虑一
+个没有几何扭转的机翼，同时也没有气动扭转。因为
+整个机翼上的诱导迎角是一个常数，所以有效迎角也
+是一个常数，因此当地截面翼型的升力系数如下
+\[
+  c_l=a_0(\alpha_{\mathrm{eff}}-\alpha_{L=0})
+\]
+假设每个截面翼型的升力系数曲线的斜率都是$a_0$
+，都是$2\pi$。因此，沿着翼展方向，升力系数也是
+常数，单位翼展上的升力由下式给出
+\[
+  L'(y)q_\infty c_l
+\]
+于是，我们就可以求得这个机翼的弦长分布
+\[
+  c(y)=\frac{L'(y) }{q_\infty c_l}
+\]
+因为动压和升力系数沿着翼展方向都是常数，所以对
+于这样一个椭圆型升力分布的机翼，弦长沿翼展方向
+也必须是椭圆型变化的。这种情况下，我们说这个机
+翼就是椭圆形机翼，即从上往下看，机翼的形状是椭
+圆形的。
+
+\subsection{一般升力分布}
+考虑一个积分变换
+\[
+  y=-\frac{b}{2}
+\]
+对于任意一个机翼的一般环量分布，我们可以把$\Gamma(y) $
+展开成一个傅里叶正弦级数，即
+\[
+  \Gamma(\theta)=2 b V_\infty 
+  \sum_{n=1}^{N} A_n \sin n \theta
+\]
+于是我们就可以得到
+\[
+  \frac{\mathrm{d}\Gamma}{\mathrm{d}y}= 
+  2 b V_\infty 
+  \sum_{n=1}^{N} n \cos n \theta \frac{\mathrm{d} \theta}{\mathrm{d} y}
+\]
+几何攻角的计算公式如下
+\[
+  \alpha(\theta_0)= 
+  \frac{2b }{\pi c(\theta_0)}
+  \sum_{n=1}^{N} A_n \sin n \theta 
+  +\alpha_{L=0}(\theta_0)+
+  \sum_{n=1}^{N} \frac{\sin n \theta_0}{\theta_0}
+\]
+给出升力系数计算公式
+\[
+  C_L=\frac{2b^2}{S}
+  \sum_{n=1}^{N} A_n \int _0^\pi 
+  \sin n \theta \sin \theta \mathrm{d} \theta
+\]
+计算上面这个积分得到
+\[
+  C_L=A_1\pi \mathrm{AR}
+\]
+诱导阻力系数的计算公式
+\[
+  C_{D,i}= \frac{2b^2}{S }\int _0^\pi 
+  \left(\sum_{n=1}^{N} A_n \sin n \theta \right) 
+  \alpha_i(\theta) \sin \theta \mathrm{d} \theta
+\]
+诱导迎角的计算公式
+\[
+  \alpha_i (y_0)= \frac{1}{\pi}
+  \sum_{n=1}^{N} n A_n \int _0 ^\pi 
+  \frac{\cos n \theta}{\cos \theta -\theta_0}\mathrm{d} \theta
+\]
+于是
+\[
+  \alpha_i(\theta_0)
+  =\sum_{n=1}^{N} n A_n \frac{\sin n \theta_0}{\sin \theta_0}
+\]
+代入到诱导阻力的计算公式中
+\[
+  C_{D,i}=\pi \mathrm{AR}A_1^2 
+  \left[1+\sum_{n=2}^{N} n\left(\frac{A_n}{A_1}\right)^2\right]
+\] 
+将升力系数的计算公式代入，并令$\delta = \sum\limits_{n=2}^{N} n (A_n / A_1)^2$
+得到
+\begin{empheq}[box=\widefbox]{align*}
+  C_{D,i}&=\frac{C_L^2}{\pi \mathrm{AR}}(1+\delta)\\
+         &= \frac{C_L^2}{\pi e \mathrm{AR}}
+\end{empheq}
+其中$e=(1+\delta)^{-1}$，并且$e$是一个小于1的系数。
+当$\delta=0 $和$e=1$的时候，升力分布是一个椭圆型的升力分布。
+
+\subsection{展弦比的影响}
+从诱导阻力系数的计算公式中，可以发现展弦比和诱导阻力系数
+是反比关系。因此，最小化诱导阻力的主要设计因素不是让
+升力分布更加接近椭圆形而是是展弦比尽可能大。
+回忆一下，总阻力系数由下式给出
+\[
+  C_D=c_d+\frac{C_L^2 }{\pi e \mathrm{AR}}
+\]
+不难拿得出总阻力系数和升力系数是二次相关的。
+
+翼型和机翼的性质有两个主要的差别。一个是前面讨论的
+诱导阻力系数，即机翼会产生诱导阻力；
+另外一个是接下来要讨论的升力系数曲线。
+定义机翼的升力线斜率是$a=\frac{\mathrm{d}C_L}{\mathrm{d}\alpha}$。
+与当地截面翼型的升力线斜率相比，我们知道$a<a_0$。
+这是因为诱导迎角的存在，使得有效迎角小于实际迎角。
+但是零升迎角却没有发生变化，这就相当于$x$轴被拉长了。
+也就是
+\[
+  \frac{\mathrm{d}C_l}{\mathrm{d}(\alpha-\alpha_i)}=a_0
+\]
+积分我们得到
+\[
+  C_L=a_0(\alpha-\frac{C_L}{\pi \mathrm{AR}})+const
+\]
+整理一下，不难得到
+\begin{empheq}[box=\widefbox]{equation*}
+  a=\frac{a_0}{1+\frac{a_0}{\pi \mathrm{AR}}}
+\end{empheq}
+上式只适用于椭圆形机翼，
+对于一般升力分布的机翼来说，升力线斜率的计算公式
+如下
+\[
+  a=\frac{a_0}{1+(1+\tau)\frac{a_0}{\pi \mathrm{AR}}}
+\]
+$\tau$是傅里叶级数系数$A_n$的函数，一般$0.05\leq \tau \geq 0.25$
+
+展弦比越大，机翼的升力线斜率就越接近翼型的升力线斜率。
+\input{./aerodynamics/finite_wing_summary.tex}
