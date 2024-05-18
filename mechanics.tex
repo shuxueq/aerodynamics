@@ -3,35 +3,37 @@
 \input{./template/preamble.tex}
 
 \begin{document}
-  \include{./titlepage/titlepage}
+\include{./titlepage/titlepage}
 
-  %空气动力学
+%空气动力学
 
-  \part{流体力学基础}
-  %基础知识介绍
-  \include{./aerodynamics/introductory_thoughts}
-  %场论
-  \include{./aerodynamics/Field_theory_review}
-  %基本方程
-  \include{./aerodynamics/fundamental_equations}
-  %b不可压无粘流
-  \include{./aerodynamics/incompressible_inviscous_flow}
-  %高速可压流动
-  \include{./aerodynamics/high-speed_pressure_flow}
-  
-  %空气动力学部分
-  \part{空气动力学}
-  %低速翼型气动特性
-  \include{./aerodynamics/Incompressible_Flow_over_Airfoils}
-  \include{./aerodynamics/Incompressible_Flow_Airfoil_2}
-  %不可压无粘流绕流有限翼展机翼
-  \include{./aerodynamics/finite_wing}
+\part{流体力学基础}
+%基础知识介绍
+\include{./aerodynamics/introductory_thoughts}
+%场论
+\include{./aerodynamics/Field_theory_review}
+%基本方程
+\include{./aerodynamics/fundamental_equations}
+%b不可压无粘流
+\include{./aerodynamics/incompressible_inviscous_flow}
+%高速可压流动
+\include{./aerodynamics/high-speed_pressure_flow}
+%喷管
+\include{./aerodynamics/nozzles}
 
-  %附录
-  \part{附录}
-  \appendix
-  %积分
-  \include{./appendix/integral}
-  %开尔文环量定理证明
-  \include{./appendix/kelvin}
+%空气动力学部分
+\part{空气动力学}
+%低速翼型气动特性
+\include{./aerodynamics/Incompressible_Flow_over_Airfoils}
+\include{./aerodynamics/Incompressible_Flow_Airfoil_2}
+%不可压无粘流绕流有限翼展机翼
+\include{./aerodynamics/finite_wing}
+
+%附录
+\part{附录}
+\appendix
+%积分
+\include{./appendix/integral}
+%开尔文环量定理证明
+\include{./appendix/kelvin}
 \end{document}

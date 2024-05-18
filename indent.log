@@ -1,0 +1,31 @@
+INFO:  ANSI Code Page: 936
+INFO:  latexindent.exe version 3.23.7, 2024-03-16, a script to indent .tex files
+       latexindent.exe lives here: C:/texlive/2024/bin/windows/
+       Sat May 18 15:07:53 2024
+       Filename: d:/Documents/LaTeX/Aerodynamics/aerodynamics/__latexindent_temp_nozzles.tex
+INFO:  Processing switches:
+       -y|--yaml: YAML settings specified via command line
+       -c|--cruft: cruft directory
+INFO:  Directory for backup files and d:/Documents/LaTeX/Aerodynamics//indent.log:
+       d:/Documents/LaTeX/Aerodynamics/
+INFO:  YAML settings read: defaultSettings.yaml
+       Reading defaultSettings.yaml from C:/texlive/2024/bin/windows/defaultSettings.yaml
+       Reading defaultSettings.yaml (2nd attempt) from C:/texlive/2024/bin/windows/../../texmf-dist/scripts/latexindent/defaultSettings.yaml
+       and then, if necessary, C:/texlive/2024/bin/windows/LatexIndent/defaultSettings.yaml
+INFO:  YAML reading settings
+       Home directory is C:\Users\shuxue
+       latexindent.pl didn't find indentconfig.yaml or .indentconfig.yaml
+       see all possible locations: https://latexindentpl.readthedocs.io/en/latest/sec-appendices.html#indentconfig-options)
+INFO:  YAML settings read: -y switch
+       YAML setting: defaultIndent:'    '
+       single-quoted string found in -y switch: '    ', substitute to     
+       Updating mainSettings with defaultIndent:     
+INFO:  Phase 1: searching for objects
+INFO:  Phase 2: finding surrounding indentation
+INFO:  Phase 3: indenting objects
+INFO:  Phase 4: final indentation check
+INFO:  Output routine:
+       Not outputting to file; see -w and -o switches for more options.
+       --------------
+INFO:  Please direct all communication/issues to:
+        https://github.com/cmhughes/latexindent.pl
